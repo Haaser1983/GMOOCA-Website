@@ -1,0 +1,196 @@
+/* ==========================================
+   GMOOCA Casino-Themed CSS Variables & Styles
+   Updated: Partners section with dark bg & clickable logos
+   ========================================== */
+
+:root {
+    --primary-red: #8B0000;
+    --accent-gold: #FFD700;
+    --text-dark: #333333;
+    --text-light: #FFFFFF;
+    --font-title: 'Cinzel', Georgia, serif;
+    --font-body: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
+    padding: 4rem 0 5rem;
+}
+
+#hero {
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                url('/images/hero-bg.jpg') center/cover fixed no-repeat;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--text-light);
+}
+
+.section-reveal {
+    transform: translateY(50px);
+    opacity: 1; /* Start visible */
+    transition: transform 0.9s ease-out;
+}
+
+.section-reveal.visible {
+    transform: translateY(0);
+}
+
+footer {
+    flex-shrink: 0;
+    background: #111;
+    padding: 2.5rem 0;
+}
+
+/* Spacing & typography helpers */
+.section-title {
+    margin-bottom: 3rem;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: var(--accent-gold);
+    margin: 1rem auto 0;
+    border-radius: 2px;
+}
+
+.card {
+    margin-bottom: 2rem;
+    border: 1px solid var(--accent-gold);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(139, 0, 0, 0.2);
+}
+
+.card-img-top {
+    height: 240px;
+    object-fit: contain;
+    background: #111;
+    padding: 15px;
+}
+
+/* Partners Section - Lighter neutral background with subtle warmth */
+.bg-partners-light {
+    background: linear-gradient(90deg,rgba(242, 244, 245, 1) 0%, rgba(215, 220, 245, 1) 50%, rgba(242, 242, 242, 1) 100%);
+    background-color: rgba(219, 219, 219, 0.55); /* Semi-opaque dark gray with red tint */
+    border: 1px solid rgba(255, 215, 0, 0.08);
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.partner-logo {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    display: block;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+}
+
+.partner-logo:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(255, 215, 0, 0.12);
+}
+
+.partner-logo img {
+    max-height: 90px;
+    width: auto;
+    filter: brightness(1.05) contrast(1.08); /* Ensures white/orange logos pop clearly */
+}
+
+/* Optional: Subtle gold glow on hover (uncomment if you like) */
+
+.partner-logo:hover {
+    box-shadow: 2px 17px 26px 13px rgba(182,173,255,0.72);
+}
+
+
+/* Responsive grid adjustments */
+@media (max-width: 768px) {
+    .partners-section {
+        padding: 2rem 1rem;
+    }
+    .partner-logo {
+        padding: 1rem;
+    }
+    .partner-logo img {
+        max-height: 70px;
+    }
+}
+
+/* Existing card, table, embed, badge, img-fluid, etc. styles remain unchanged */
+/* Progress Bar - Enhanced with animated gradient shine */
+.progress-container {
+    width: 80%;
+    max-width: 600px;
+    background: #111;
+    border: 1px solid #D4AF37;
+    height: 28px;               /* Slightly taller for better visibility */
+    margin: 1.5rem auto;
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;         /* For absolute positioning of shine */
+    box-shadow: 0 2px 10px rgba(212, 175, 55, 0.1);
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;                  /* Still controlled by JS real progress */
+    background: linear-gradient(
+        90deg,
+        #b8860b 0%,             /* Darker gold start */
+        #D4AF37 40%,            /* Bright gold peak */
+        #D4AF37 60%,            /* Hold bright */
+        #b8860b 100%            /* Darker gold end */
+    );
+    background-size: 200% 100%; /* For gradient movement */
+    animation: shine 6s linear infinite; /* Continuous subtle movement */
+    transition: width 0.8s ease-out;     /* Smooth real progress updates */
+    position: relative;
+}
+
+/* Shine / pulse animation */
+@keyframes shine {
+    0%   { background-position: 100% 0; }
+    100% { background-position: -100% 0; }
+}
+
+/* Optional: Subtle glow overlay for premium feel */
+.progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 50%; height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 215, 0, 0.4) 50%,   /* Gold glow */
+        transparent 100%
+    );
+    animation: gloss 8s ease-in-out infinite;
+}
+
+@keyframes gloss {
+    0%, 100% { transform: translateX(-100%); opacity: 0.6; }
+    50%      { transform: translateX(300%);  opacity: 0.9; }
+}
