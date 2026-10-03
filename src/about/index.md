@@ -32,7 +32,7 @@ We want to end that. GMOOCA's software, hardware and guides are for anyone who o
 
 ## Where GMOOCA fits
 
-We're not starting from zero, and we're not here to replace anyone. Communities like NLG have spent years helping owners, operators and collectors, and free projects are already linking home game rooms together. We want to build on what they've started and make it better, alongside them.
+We're not starting from zero, and we're not here to replace anyone. Communities like [New Life Games (NLG)](https://newlifegames.com/) have spent years helping owners, operators and collectors, and free projects are already linking home game rooms together. We want to build on what they've started and make it better, alongside them.
 
 One project we admire is [CabiNet](https://github.com/ajs1616/CabiNet), a free, open-source system that links the machines in a home game room over G2S and SAS, with cross-machine tickets, player cards and a live floor view. Our own software isn't ready to ship yet, so if you want to link your machines today, CabiNet is well worth a look.
 
