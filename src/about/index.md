@@ -24,9 +24,19 @@ Today GMOOCA, Inc. is a North Carolina corporation. We write our own guides, bui
 - **Operators** of parlors, arcades, routes and small casinos who need dependable records and control, at a price that fits.
 - **Collectors** who restore and preserve machines and care about their history.
 
-## Open to everyone
+## Why GMOOCA exists
 
-Most companies that build gaming systems sell only to licensed casinos and their suppliers. GMOOCA's software and hardware are for anyone who owns a machine. When Gaming Manager is released, its free edition won't even need an account. In the meantime, our guides and project updates are open to everyone, with no license or sales call required.
+Gatekeeping runs deep in this industry. Documentation sits behind non-disclosure agreements, systems and parts are sold only to licensed operators, and much of what it takes to keep a machine running is known by a handful of technicians and dealers. If you own a machine outside a casino, you're usually left to figure it out on your own.
+
+We want to end that. GMOOCA's software, hardware and guides are for anyone who owns a machine. When Gaming Manager is released, its free edition won't even need an account. What we learn, we share in our own words, so the next owner doesn't have to start from scratch.
+
+## Where GMOOCA fits
+
+We're not starting from zero, and we're not here to replace anyone. Communities like NLG have spent years helping owners, operators and collectors, and free projects are already linking home game rooms together. We want to build on what they've started and make it better, alongside them.
+
+One project we admire is [CabiNet](https://github.com/ajs1616/CabiNet), a free, open-source system that links the machines in a home game room over G2S and SAS, with cross-machine tickets, player cards and a live floor view. Our own software isn't ready to ship yet, so if you want to link your machines today, CabiNet is well worth a look.
+
+What we haven't found is anyone building the whole path: software and hardware that start with a single machine in a game room and grow with its owner to a parlor, a route or a small casino, on the same SAS and G2S standards the industry uses, with plain-language guides, a community, and the enterprise and regulatory functions larger operators need. That's GMOOCA's vision.
 
 ## Where the money goes
 

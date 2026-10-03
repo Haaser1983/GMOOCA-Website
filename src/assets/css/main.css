@@ -390,3 +390,5 @@ a:hover { color: var(--brass-ink); }
 .principles h3 { margin-bottom: 0.4em; }
 .principles p { color: var(--muted); margin: 0; }
 @media (max-width: 52rem) { .principles { grid-template-columns: 1fr; } }
+.principles-note { margin: 2rem 0 0; color: var(--muted); max-width: 70ch; }
+.principles-note a { font-weight: 650; }

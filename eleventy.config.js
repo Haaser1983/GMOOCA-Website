@@ -5,6 +5,15 @@ const md = markdownIt({ html: true, linkify: false, typographer: true });
 export default function (eleventyConfig) {
   md.renderer.rules.table_open = () => '<div class="table-scroll"><table>\n';
   md.renderer.rules.table_close = () => "</table></div>\n";
+  // id on every h2/h3 in Markdown so sections can be linked (/about/#where-gmooca-fits)
+  md.renderer.rules.heading_open = (tokens, i, opts, env, self) => {
+    const t = tokens[i];
+    if (["h2", "h3"].includes(t.tag) && !t.attrGet("id")) {
+      const text = tokens[i + 1].children.map((c) => c.content).join("");
+      t.attrSet("id", text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""));
+    }
+    return self.renderToken(tokens, i, opts);
+  };
   eleventyConfig.setLibrary("md", md);
   // inline markdown for short strings in data files (links, emphasis)
   eleventyConfig.addFilter("md", (s) => md.renderInline(s || ""));
