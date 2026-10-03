@@ -1,0 +1,27 @@
+---
+layout: layouts/base.njk
+---
+<article>
+  <header class="page-head">
+    <div class="wrap">
+      <p class="crumb"><a href="/guides/">Guides</a></p>
+      <h1>{{ title }}</h1>
+      {% if lede %}<p class="lede">{{ lede }}</p>{% endif %}
+      <p class="page-meta">Updated <time datetime="{{ updated | dateIso }}">{{ updated | readableDate }}</time>. Written by GMOOCA in plain language; not an official specification.</p>
+    </div>
+  </header>
+  <div class="wrap page-body prose">
+    {{ content | safe }}
+  </div>
+</article>
+<aside class="band band-alt" aria-labelledby="more-h">
+  <div class="wrap split">
+    <h2 id="more-h">More guides</h2>
+    <ul class="guide-list">
+      {% for g in collections.guide | reverse %}{% if g.url != page.url %}
+      <li><a href="{{ g.url }}"><span class="guide-title">{{ g.data.title }}</span><span class="guide-desc">{{ g.data.summary }}</span></a></li>
+      {% endif %}{% endfor %}
+      <li><a href="/Community/"><span class="guide-title">Have a question these don't answer?</span><span class="guide-desc">The forums are coming. Leave your email on the community page and we'll tell you when they open.</span></a></li>
+    </ul>
+  </div>
+</aside>

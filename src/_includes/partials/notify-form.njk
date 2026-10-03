@@ -1,0 +1,25 @@
+<form class="notify" action="/notify.php" method="post">
+  <label for="notify-email">Email address</label>
+  <div class="notify-row">
+    <input id="notify-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+    <button class="btn btn-primary" type="submit">Notify me</button>
+  </div>
+  <div class="hp" aria-hidden="true">
+    <label for="notify-website">Leave this empty</label>
+    <input id="notify-website" name="website" type="text" tabindex="-1" autocomplete="off">
+  </div>
+  <input type="hidden" name="return" value="{{ page.url }}">
+  <p class="form-note" data-form-status="notify">See our <a href="/privacy/">privacy policy</a>. Unsubscribe by replying to the email.</p>
+</form>
+<script>
+  (function () {
+    var messages = {
+      email: "That email address doesn't look right. Check it and try again.",
+      rate: "Too many attempts from your connection. Please try again in a few minutes.",
+      error: "Something went wrong saving your address. Please try again, or email us at {{ site.email }}."
+    };
+    var code = new URLSearchParams(location.search).get("notify");
+    var note = document.querySelector('[data-form-status="notify"]');
+    if (code && messages[code] && note) { note.textContent = messages[code]; note.setAttribute("role", "alert"); note.classList.add("form-note-error"); }
+  })();
+</script>

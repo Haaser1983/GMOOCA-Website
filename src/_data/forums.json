@@ -1,0 +1,10 @@
+[
+  { "name": "Announcements and introductions", "text": "News from GMOOCA, and a place to say hello and show off your machines." },
+  { "name": "Machine help", "text": "Troubleshooting and repair, organized by era: mechanical and early electronic, stepper and video, and modern machines." },
+  { "name": "Connectivity and protocols", "text": "SAS, G2S, ticket printers, bill validators and getting machines to talk to software." },
+  { "name": "Parts and sourcing", "text": "Where to find boards, glass, keys, lamps and cabinets, and which suppliers people trust." },
+  { "name": "Restoration and builds", "text": "Project threads from first look to finished cabinet." },
+  { "name": "Small operators", "text": "Running a parlor, route or arcade: maintenance schedules, record keeping, floor layout." },
+  { "name": "Rules and regulations", "text": "Discussion of how different states treat machine ownership. Experience-sharing only; no legal advice." },
+  { "name": "GMOOCA projects", "text": "Feedback, testing and support for Gaming Manager and the EGM Module." }
+]

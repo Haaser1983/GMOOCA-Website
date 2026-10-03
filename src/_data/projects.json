@@ -1,0 +1,85 @@
+[
+  {
+    "id": "gaming-manager",
+    "name": "GMOOCA Gaming Manager Pro 2",
+    "kind": "Software",
+    "summary": "Windows software that connects to your machines and keeps track of meters, events and vouchers. Built for home rooms and small floors, not casino budgets.",
+    "phases": [
+      "Plan",
+      "Design",
+      "Build",
+      "Test",
+      "Release"
+    ],
+    "phase": "Build",
+    "updated": "2026-10-02",
+    "note": "Ground-up rewrite underway. The earlier version proved live two-way SAS communication with a machine on our test bench.",
+    "log": [
+      {
+        "date": "2026-10-02",
+        "text": "Rewrite in progress on a clean, modular codebase."
+      },
+      {
+        "date": "2026-08-19",
+        "text": "Earlier version retired after live SAS testing; lessons carried into the rewrite."
+      }
+    ],
+    "details": [
+      "Gaming Manager acts as the host system for your machines. It talks to each machine over SAS, reads its meters and events, and keeps a running history you can look back on.",
+      "It's being built for the owners and small operators that casino systems ignore: one machine in a game room up to a modest floor, with pricing to match. G2S support is planned once SAS support is solid.",
+      "Planned editions range from a free single-machine version to multi-location and white-label options. Pricing will be announced closer to release."
+    ]
+  },
+  {
+    "id": "egm-module",
+    "name": "GMOOCA EGM Module",
+    "kind": "Hardware",
+    "summary": "A small box that sits inside the cabinet and puts a machine's serial port on your network, so software can talk to it safely over Ethernet.",
+    "phases": [
+      "Plan",
+      "Design",
+      "Build",
+      "Test",
+      "Release"
+    ],
+    "phase": "Design",
+    "updated": "2026-08-19",
+    "note": "Schematic review complete. Next step is schematic capture and circuit board layout.",
+    "log": [
+      {
+        "date": "2026-08-19",
+        "text": "Design review finished; corrections made before board layout."
+      }
+    ],
+    "details": [
+      "Every SAS machine has a serial port, and serial cables don't travel well across a room or a building. The EGM Module mounts inside the cabinet, connects to the machine's SAS port, and puts it on your network over a standard Ethernet cable.",
+      "Each connection is electrically isolated to protect the machine's electronics, and the module can be updated over USB as the software grows. It's designed to work hand in hand with Gaming Manager."
+    ]
+  },
+  {
+    "id": "community",
+    "name": "Community forums",
+    "kind": "Platform",
+    "summary": "Forums and a download library for owners, operators and collectors, all under one login.",
+    "phases": [
+      "Plan",
+      "Design",
+      "Build",
+      "Test",
+      "Release"
+    ],
+    "phase": "Plan",
+    "updated": "2026-08-23",
+    "note": "Forum platform chosen and category structure drafted. Launch follows the platform purchase and setup.",
+    "log": [
+      {
+        "date": "2026-08-23",
+        "text": "Platform selected; forum categories planned."
+      }
+    ],
+    "details": [
+      "The GMOOCA community will run on a dedicated forum platform at gmooca.org/Community, with discussion forums and a download library of GMOOCA-written guides and member-submitted original work.",
+      "Membership will be free at launch. See the [community page](/Community/) for the planned forum sections and ground rules."
+    ]
+  }
+]

@@ -1,0 +1,16 @@
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p class="footer-name">{{ site.legalName }}</p>
+      <p>{{ site.fullName }}. A North Carolina corporation, active since {{ site.founded }}.</p>
+      <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+    </div>
+    <ul class="footer-links">
+      {% for item in site.nav %}<li><a href="{{ item.url }}">{{ item.label }}</a></li>{% endfor %}
+      <li><a href="/privacy/">Privacy</a></li>
+      <li><a href="/terms/">Terms</a></li>
+    </ul>
+    <p class="fineprint">{{ site.trademarks }} Nothing on this site is legal advice; gaming machine ownership rules vary by state.</p>
+    <p class="fineprint">&copy; {{ site.founded }}&ndash;{{ build.year }} {{ site.legalName }}</p>
+  </div>
+</footer>

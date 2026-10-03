@@ -1,0 +1,23 @@
+---
+layout: layouts/page.njk
+title: Guides
+lede: Plain-language explanations of how gaming machines work and connect, written by GMOOCA for owners, operators and collectors.
+description: Plain-language guides to slot machine communication protocols, including SAS and G2S, written for owners, small operators and collectors.
+permalink: /guides/
+prose: false
+---
+<ul class="guide-list guide-list-lg">
+  {% for g in collections.guide | sort(false, false, "data.order") %}
+  <li>
+    <a href="{{ g.url }}">
+      <span class="guide-title">{{ g.data.title }}</span>
+      <span class="guide-desc">{{ g.data.summary }}</span>
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+
+<div class="callout">
+  <h2>What you won't find here</h2>
+  <p>We write our own material. We don't republish manufacturer manuals, service documents or paid standards, and we don't cover getting around a machine's security. When an official source is the right answer, we'll point you to it.</p>
+</div>

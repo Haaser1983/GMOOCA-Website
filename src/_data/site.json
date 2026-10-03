@@ -1,0 +1,33 @@
+{
+  "name": "GMOOCA",
+  "legalName": "GMOOCA, Inc.",
+  "fullName": "Gaming Machine Owners, Operators and Collectors Association",
+  "url": "https://www.gmooca.org",
+  "email": "info@gmooca.org",
+  "founded": 2020,
+  "communityLive": false,
+  "description": "Plain-language guides, software and hardware for slot machine owners, small operators and collectors. Learn how SAS and G2S work, follow our projects, and join the forums when they open.",
+  "nav": [
+    {
+      "label": "Guides",
+      "url": "/guides/"
+    },
+    {
+      "label": "Projects",
+      "url": "/projects/"
+    },
+    {
+      "label": "Community",
+      "url": "/Community/"
+    },
+    {
+      "label": "About",
+      "url": "/about/"
+    },
+    {
+      "label": "Contact",
+      "url": "/contact/"
+    }
+  ],
+  "trademarks": "IGT, Aristocrat, Konami, Light & Wonder, GSA, SAS and G2S are trademarks of their respective owners. GMOOCA is not affiliated with, sponsored by or endorsed by any gaming manufacturer or standards body."
+}

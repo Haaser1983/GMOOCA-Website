@@ -1,0 +1,45 @@
+---
+layout: layouts/page.njk
+title: Community
+lede: GMOOCA's forums and download library are on the way. Here's what they'll cover and the rules they'll run by.
+description: The GMOOCA community forums for slot machine owners, operators and collectors are coming soon. See the planned forum sections and get notified when registration opens.
+prose: false
+---
+<section class="split community-notify" id="notify" aria-labelledby="notify-h">
+  <div>
+    <h2 id="notify-h">Get one email when registration opens</h2>
+    <p>Membership will be free at launch. Leave your address and we'll write once, when you can sign up. We won't share it or use it for anything else.</p>
+  </div>
+  {% include "partials/notify-form.njk" %}
+</section>
+
+<section class="community-section" aria-labelledby="forums-h">
+  <h2 id="forums-h">Planned forum sections</h2>
+  <dl class="forum-map">
+    {% for f in forums %}
+    <div>
+      <dt>{{ f.name }}</dt>
+      <dd>{{ f.text }}</dd>
+    </div>
+    {% endfor %}
+  </dl>
+</section>
+
+<section class="community-section split" aria-labelledby="library-h">
+  <h2 id="library-h">The download library</h2>
+  <div class="prose">
+    <p>Alongside the forums, members will be able to share original work: wiring notes, restoration write-ups, photos, setup checklists and tools they've built. GMOOCA's own guides and software will live there too.</p>
+    <p>Manufacturer manuals, service bulletins, firmware, game software and paid standards documents won't be accepted. They belong to their owners, and hosting them puts everyone at risk.</p>
+  </div>
+</section>
+
+<section class="community-section split" aria-labelledby="rules-h">
+  <h2 id="rules-h">Ground rules</h2>
+  <ol class="rules">
+    <li><strong>Be useful and be decent.</strong> Experts and first-time owners are equally welcome. Answer the question that was asked.</li>
+    <li><strong>No legal advice.</strong> Members can share their own experience with their state's rules, but nobody, including GMOOCA, gives legal advice here. Talk to an attorney about your situation.</li>
+    <li><strong>No security bypasses.</strong> No help defeating a machine's locks, seals, security chips, licensing or accounting.</li>
+    <li><strong>Only share what's yours to share.</strong> Original work, links to official sources, and photos you took. No copyrighted manuals, firmware or game files.</li>
+    <li><strong>No gambling services.</strong> No promoting online gambling, sweepstakes operations or anything that takes wagers.</li>
+  </ol>
+</section>

@@ -1,0 +1,45 @@
+---
+layout: layouts/page.njk
+title: Projects
+lede: The software, hardware and community platform GMOOCA is building, with where each one stands today.
+description: Progress on GMOOCA Gaming Manager Pro 2, the GMOOCA EGM Module hardware, and the GMOOCA community forums.
+permalink: /projects/
+prose: false
+---
+<p class="band-meta">Last updated <time datetime="{{ projects | latestUpdate }}">{{ projects | latestUpdate | readableDate }}</time>. Release dates aren't promised until a project reaches testing.</p>
+
+{% for p in projects %}
+{% set current = p | phaseIndex %}
+<section class="project-full" id="{{ p.id }}" aria-labelledby="{{ p.id }}-h">
+  <div class="project-full-head">
+    <p class="project-kind">{{ p.kind }}</p>
+    <h2 id="{{ p.id }}-h">{{ p.name }}</h2>
+  </div>
+  <div class="project-full-body">
+    <div class="prose">
+      <p class="lead-in">{{ p.summary }}</p>
+      {% for para in p.details %}<p>{{ para | md | safe }}</p>{% endfor %}
+    </div>
+    <div class="project-side">
+      <h3 class="side-h">Stage</h3>
+      <ol class="phases" aria-label="{{ p.name }} progress: {{ p.phase }} phase">
+        {% for ph in p.phases %}
+        <li class="{% if loop.index0 < current %}done{% elif loop.index0 == current %}now{% endif %}"{% if loop.index0 == current %} aria-current="step"{% endif %}><span>{{ ph }}</span></li>
+        {% endfor %}
+      </ol>
+      <p class="project-note">{{ p.note }}</p>
+      <h3 class="side-h">History</h3>
+      <ol class="log" reversed>
+        {% for entry in p.log %}
+        <li><time datetime="{{ entry.date }}">{{ entry.date | readableDate }}</time><span>{{ entry.text }}</span></li>
+        {% endfor %}
+      </ol>
+    </div>
+  </div>
+</section>
+{% endfor %}
+
+<div class="callout">
+  <h2>Want to hear when something ships?</h2>
+  <p>Leave your email on the <a href="/Community/#notify">community page</a>. We'll write when the forums open, and we'll post project news there first.</p>
+</div>

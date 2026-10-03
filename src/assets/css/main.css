@@ -1,0 +1,377 @@
+/* ==========================================================================
+   GMOOCA — design tokens
+   Service-manual paper, cabinet ink, candle-light brass.
+   ========================================================================== */
+@font-face {
+  font-family: "Archivo";
+  src: url("/assets/fonts/archivo-var.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --paper: #f1f2ee;
+  --paper-2: #e6e8e2;
+  --ink: #17201d;
+  --muted: #56615c;
+  --rule: #c9cec7;
+  --brass: #c4912d;       /* fills, markers */
+  --brass-ink: #7a5512;   /* brass used as text on paper (AA) */
+  --bezel: #1d2521;
+  --glass-hi: #fbfbf8;
+  --glass-lo: #b9beb6;
+  --on-brass: #17201d;
+
+  --font: "Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --measure: 66ch;
+  --wrap: 72rem;
+  --gutter: clamp(1rem, 4vw, 2.5rem);
+
+  /* type scale (1.25, minor third-ish steps) */
+  --t-sm: 0.875rem;
+  --t-base: 1.0625rem;
+  --t-md: 1.25rem;
+  --t-lg: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
+  --t-xl: clamp(2.25rem, 1.4rem + 3.6vw, 4.25rem);
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #121714;
+    --paper-2: #181f1b;
+    --ink: #e5e8e2;
+    --muted: #9ba59f;
+    --rule: #2c3531;
+    --brass: #d6a443;
+    --brass-ink: #e3b862;
+    --bezel: #070908;
+    --glass-hi: #e9eae4;
+    --glass-lo: #9da298;
+    --on-brass: #121714;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #121714; --paper-2: #181f1b; --ink: #e5e8e2; --muted: #9ba59f;
+  --rule: #2c3531; --brass: #d6a443; --brass-ink: #e3b862; --bezel: #070908;
+  --glass-hi: #e9eae4; --glass-lo: #9da298; --on-brass: #121714;
+  color-scheme: dark;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: var(--t-base);
+  line-height: 1.6;
+  font-variation-settings: "wdth" 100;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3 {
+  margin: 0 0 0.5em;
+  line-height: 1.1;
+  font-weight: 750;
+  font-stretch: 112%;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+h2 { font-size: var(--t-lg); }
+h3 { font-size: var(--t-md); font-stretch: 105%; }
+p { margin: 0 0 1em; max-width: var(--measure); text-wrap: pretty; }
+
+a { color: var(--ink); text-decoration-color: var(--brass); text-decoration-thickness: 2px; text-underline-offset: 0.2em; }
+a:hover { color: var(--brass-ink); }
+:focus-visible { outline: 3px solid var(--brass); outline-offset: 3px; border-radius: 2px; }
+
+.wrap { max-width: var(--wrap); margin-inline: auto; padding-inline: var(--gutter); }
+
+.skip { position: absolute; left: -999px; top: 0.5rem; background: var(--ink); color: var(--paper); padding: 0.5rem 1rem; z-index: 10; }
+.skip:focus { left: 0.5rem; }
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+.site-header { border-bottom: 1px solid var(--rule); }
+.header-inner {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 0.5rem 2rem; padding-block: 1rem;
+}
+.wordmark {
+  font-size: 1.5rem; font-weight: 900; font-stretch: 125%; letter-spacing: 0.04em;
+  text-decoration: none; color: var(--ink);
+}
+.nav-list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem; }
+.nav-list a { text-decoration: none; font-weight: 550; color: var(--muted); padding-block: 0.25rem; }
+.nav-list a:hover, .nav-list a[aria-current="page"] { color: var(--ink); box-shadow: inset 0 -2px var(--brass); }
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.btn {
+  display: inline-block; padding: 0.75rem 1.25rem; border-radius: 6px;
+  font: inherit; font-weight: 650; text-decoration: none; cursor: pointer;
+  border: 2px solid transparent; line-height: 1.2;
+}
+.btn-primary { background: var(--brass); color: var(--on-brass); }
+.btn-primary:hover { background: var(--brass-ink); color: var(--paper); }
+.btn-quiet { border-color: var(--rule); color: var(--ink); }
+.btn-quiet:hover { border-color: var(--ink); color: var(--ink); }
+
+/* ==========================================================================
+   Hero + reels
+   ========================================================================== */
+.hero { padding-block: clamp(3rem, 8vw, 6rem) clamp(2.5rem, 6vw, 4.5rem); }
+.hero-title { font-size: var(--t-xl); font-weight: 800; font-stretch: 115%; max-width: 17ch; letter-spacing: -0.02em; }
+.hero-lede { font-size: var(--t-md); color: var(--muted); max-width: 52ch; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.75rem; }
+
+.cabinet {
+  --sym-h: clamp(3.25rem, 2.2rem + 4vw, 6rem);
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(0.4rem, 1.5vw, 1rem);
+  margin-top: clamp(2.5rem, 6vw, 4rem);
+  padding: clamp(0.5rem, 1.5vw, 1rem);
+  background: var(--bezel);
+  border-radius: 14px;
+}
+.reel-window {
+  position: relative;
+  height: calc(var(--sym-h) * 3);
+  overflow: hidden;
+  border-radius: 6px;
+  background: linear-gradient(var(--glass-lo), var(--glass-hi) 30%, var(--glass-hi) 70%, var(--glass-lo));
+}
+/* curvature shading over the strip */
+.reel-window::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(rgb(0 0 0 / 0.38), transparent 32%, transparent 68%, rgb(0 0 0 / 0.38));
+}
+/* payline markers: brass pointers at both edges, never across the symbol */
+.reel-window::before {
+  content: ""; position: absolute; z-index: 1; left: 0; right: 0; top: 50%;
+  height: 16px; margin-top: -8px; pointer-events: none; background: var(--brass);
+  clip-path: polygon(0 0, 11px 50%, 0 100%, 0 0, 100% 0, 100% 100%, calc(100% - 11px) 50%, 100% 0);
+}
+.reel-strip {
+  display: flex; flex-direction: column;
+  transform: translateY(calc(var(--sym-h) * (var(--stop) - 1) * -1));
+  animation: spin calc(1.3s + var(--i) * 0.45s) cubic-bezier(0.25, 0.1, 0.25, 1.06) both;
+}
+@keyframes spin {
+  from { transform: translateY(calc(var(--sym-h) * 1)); filter: blur(2px); }
+  70% { filter: blur(0.5px); }
+  to { transform: translateY(calc(var(--sym-h) * (var(--stop) - 1) * -1)); filter: none; }
+}
+@media (prefers-reduced-motion: reduce) { .reel-strip { animation: none; } }
+
+.sym {
+  height: var(--sym-h); flex: none;
+  display: grid; place-items: center;
+  font-weight: 900; font-stretch: 125%;
+  font-size: calc(var(--sym-h) * 0.42);
+  color: #3b4540; /* glass is always light, so symbols stay dark in both themes */
+  white-space: nowrap;
+}
+.sym-win { color: #17201d; font-size: calc(var(--sym-h) * 0.36); letter-spacing: 0.01em; }
+
+.audiences {
+  list-style: none; margin: 1.75rem 0 0; padding: 0;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1rem, 3vw, 2rem);
+}
+.audiences h2 { font-size: var(--t-md); margin-bottom: 0.35em; }
+/* On wide screens the reel above each column already names it */
+@media (min-width: 44.01rem) {
+  .audiences h2 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+}
+.audiences p { color: var(--muted); margin: 0; }
+
+@media (max-width: 44rem) {
+  .cabinet { --sym-h: 3.25rem; }
+  .sym { font-stretch: 70%; }
+  .sym-win { font-size: clamp(0.8rem, 4vw, 1.15rem); font-stretch: 70%; }
+  .reel-window::before { height: 10px; margin-top: -5px; clip-path: polygon(0 0, 6px 50%, 0 100%, 0 0, 100% 0, 100% 100%, calc(100% - 6px) 50%, 100% 0); }
+  .audiences { grid-template-columns: 1fr; }
+}
+
+/* ==========================================================================
+   Bands
+   ========================================================================== */
+.band { padding-block: clamp(3rem, 7vw, 5rem); border-top: 1px solid var(--rule); }
+.band-alt { background: var(--paper-2); }
+.band-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.5rem 2rem; margin-bottom: 2rem; }
+.band-head h2 { margin: 0; }
+.band-meta { color: var(--muted); margin: 0; font-size: var(--t-sm); }
+
+.split { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(1.5rem, 5vw, 4rem); align-items: start; }
+@media (max-width: 52rem) { .split { grid-template-columns: 1fr; } }
+
+.text-link { font-weight: 650; }
+
+/* ==========================================================================
+   Projects
+   ========================================================================== */
+.projects { list-style: none; margin: 0 0 2rem; padding: 0; }
+.project {
+  display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 1.5rem clamp(1.5rem, 5vw, 4rem);
+  padding-block: 2rem; border-top: 1px solid var(--rule);
+}
+.project:last-child { border-bottom: 1px solid var(--rule); }
+.project h3 { margin-bottom: 0.4em; }
+.project-main p:last-child { color: var(--muted); margin: 0; }
+.project-kind { font-size: var(--t-sm); font-weight: 650; color: var(--brass-ink); margin: 0 0 0.25rem; }
+.project-note { margin: 1rem 0 0.25rem; }
+.project-date { font-size: var(--t-sm); color: var(--muted); margin: 0; }
+@media (max-width: 52rem) { .project { grid-template-columns: 1fr; } }
+
+.phases { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; }
+.phases li { font-size: var(--t-sm); color: var(--muted); }
+.phases li::before {
+  content: ""; display: block; height: 10px; margin-bottom: 0.4rem;
+  border-radius: 2px; border: 1.5px solid var(--rule); background: transparent;
+}
+.phases li.done::before { background: var(--ink); border-color: var(--ink); }
+.phases li.now::before { background: var(--brass); border-color: var(--brass); }
+.phases li.now { color: var(--ink); font-weight: 700; }
+@media (max-width: 26rem) { .phases li span { font-size: 0.75rem; } }
+
+/* ==========================================================================
+   Guides list
+   ========================================================================== */
+.guide-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
+.guide-list li { border-bottom: 1px solid var(--rule); }
+.guide-list a { display: block; padding: 1.25rem 0; text-decoration: none; }
+.guide-title { display: block; font-size: var(--t-md); font-weight: 750; font-stretch: 108%; }
+.guide-list a:hover .guide-title { color: var(--brass-ink); text-decoration: underline; text-decoration-color: var(--brass); }
+.guide-desc { display: block; color: var(--muted); margin-top: 0.25rem; max-width: 60ch; }
+
+/* ==========================================================================
+   Notify form
+   ========================================================================== */
+.notify label { display: block; font-weight: 650; margin-bottom: 0.5rem; }
+.notify-row { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.notify input[type="email"] {
+  flex: 1 1 16rem; min-width: 0; font: inherit; padding: 0.7rem 0.9rem;
+  border: 2px solid var(--rule); border-radius: 6px; background: var(--paper); color: var(--ink);
+}
+.notify input[type="email"]:focus { border-color: var(--brass); outline: none; }
+.form-note { font-size: var(--t-sm); color: var(--muted); margin-top: 0.75rem; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer { border-top: 1px solid var(--rule); background: var(--paper-2); padding-block: 3rem 2.5rem; font-size: var(--t-sm); color: var(--muted); }
+.footer-grid { display: grid; grid-template-columns: 1fr auto; gap: 1.5rem 3rem; }
+.footer-name { font-weight: 800; font-stretch: 115%; color: var(--ink); font-size: var(--t-base); margin-bottom: 0.25rem; }
+.footer-links { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 2rem; }
+.footer-links li { margin-bottom: 0.4rem; }
+.footer-links a { color: var(--muted); }
+.fineprint { grid-column: 1 / -1; margin: 0; max-width: 90ch; }
+@media (max-width: 40rem) { .footer-grid { grid-template-columns: 1fr; } }
+
+/* ==========================================================================
+   Interior pages
+   ========================================================================== */
+.page-head { padding-block: clamp(2.5rem, 7vw, 4.5rem) clamp(1.5rem, 4vw, 2.5rem); }
+.page-head h1 { font-size: clamp(2rem, 1.3rem + 3vw, 3.25rem); font-weight: 800; font-stretch: 115%; max-width: 22ch; letter-spacing: -0.02em; }
+.lede { font-size: var(--t-md); color: var(--muted); max-width: 58ch; }
+.crumb { margin: 0 0 0.75rem; font-size: var(--t-sm); font-weight: 650; }
+.page-meta { font-size: var(--t-sm); color: var(--muted); margin: 0; }
+.page-body { padding-bottom: clamp(3rem, 8vw, 5rem); }
+
+/* Long-form text */
+.prose { max-width: calc(var(--measure) + 2 * var(--gutter)); margin-inline: 0; }
+.wrap.prose { margin-inline: auto; max-width: var(--wrap); }
+.wrap.prose > * { max-width: var(--measure); }
+.prose h2 { margin-top: 2.25em; }
+.prose > h2:first-child { margin-top: 0; }
+.prose ul, .prose ol { padding-left: 1.25rem; margin: 0 0 1.25em; max-width: var(--measure); }
+.prose li { margin-bottom: 0.5em; }
+.prose li::marker { color: var(--brass-ink); }
+.prose table { border-collapse: collapse; width: 100%; max-width: 48rem; margin: 1.5rem 0 2rem; font-size: 0.975rem; }
+.prose th, .prose td { text-align: left; padding: 0.65rem 0.9rem 0.65rem 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+.prose thead th { border-bottom: 2px solid var(--ink); font-weight: 700; }
+.prose tbody th { font-weight: 650; }
+.table-scroll { overflow-x: auto; }
+
+/* Diagrams (original GMOOCA drawings, themed via tokens) */
+.diagram { margin: 2rem 0 2.25rem; max-width: 46rem !important; }
+.diagram svg { width: 100%; height: auto; display: block; background: var(--paper-2); border-radius: 10px; padding: 0.5rem; }
+.diagram figcaption { font-size: var(--t-sm); color: var(--muted); margin-top: 0.6rem; }
+.d-box { fill: var(--paper); stroke: var(--ink); stroke-width: 2; }
+.d-box-alt { fill: var(--brass); stroke: var(--brass); }
+.d-label { font: 700 16px var(--font); fill: var(--ink); text-anchor: middle; }
+.d-sub { font: 400 13px var(--font); fill: var(--muted); text-anchor: middle; }
+.d-note { font: 600 13px var(--font); fill: var(--ink); text-anchor: middle; }
+.d-wire { stroke: var(--ink); stroke-width: 3; fill: none; }
+.d-arrow { stroke: var(--brass); stroke-width: 2.5; fill: none; }
+.d-arrow-alt { stroke: var(--ink); stroke-dasharray: 6 4; }
+.d-head { fill: var(--brass); }
+
+.callout { border-left: 4px solid var(--brass); background: var(--paper-2); padding: 1.5rem 1.75rem; border-radius: 0 8px 8px 0; margin-top: 3rem; max-width: 48rem; }
+.callout h2 { font-size: var(--t-md); }
+.callout p:last-child { margin-bottom: 0; }
+
+.guide-list-lg .guide-title { font-size: var(--t-lg); }
+.guide-list-lg a { padding-block: 1.75rem; }
+
+/* ==========================================================================
+   Projects page
+   ========================================================================== */
+.project-full { padding-block: 2.5rem; border-top: 1px solid var(--rule); scroll-margin-top: 1rem; }
+.project-full:first-of-type { margin-top: 2rem; }
+.project-full-head h2 { font-size: var(--t-lg); }
+.project-full-body { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 2rem clamp(1.5rem, 5vw, 4rem); }
+@media (max-width: 52rem) { .project-full-body { grid-template-columns: 1fr; } }
+.lead-in { font-size: var(--t-md); }
+.project-side { align-self: start; }
+.side-h { font-size: var(--t-sm); font-weight: 700; font-stretch: 100%; color: var(--muted); margin: 0 0 0.75rem; letter-spacing: 0; }
+.project-side .project-note { margin: 1rem 0 2rem; }
+.log { list-style: none; margin: 0; padding: 0 0 0 1rem; border-left: 2px solid var(--rule); }
+.log li { position: relative; margin-bottom: 1rem; }
+.log li::before { content: ""; position: absolute; left: calc(-1rem - 6px); top: 0.45em; width: 10px; height: 10px; border-radius: 50%; background: var(--paper); border: 2px solid var(--brass); }
+.log time { display: block; font-size: var(--t-sm); font-weight: 650; color: var(--brass-ink); }
+
+/* ==========================================================================
+   Community page
+   ========================================================================== */
+.community-notify { padding: clamp(1.5rem, 4vw, 2.5rem); background: var(--paper-2); border-radius: 12px; margin-bottom: 3.5rem; }
+.community-notify h2 { font-size: var(--t-md); }
+.community-section { padding-block: 2.5rem; border-top: 1px solid var(--rule); }
+.forum-map { display: grid; grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); gap: 0; margin: 1.5rem 0 0; border-top: 1px solid var(--rule); }
+.forum-map > div { padding: 1.1rem 1.5rem 1.1rem 0; border-bottom: 1px solid var(--rule); }
+.forum-map dt { font-weight: 750; font-stretch: 105%; margin-bottom: 0.25rem; }
+.forum-map dd { margin: 0; color: var(--muted); }
+.rules { margin: 0; padding-left: 1.5rem; }
+.rules li { margin-bottom: 0.9rem; max-width: var(--measure); }
+.rules li::marker { color: var(--brass-ink); font-weight: 800; }
+
+/* ==========================================================================
+   Contact form
+   ========================================================================== */
+.contact-form { max-width: 34rem; }
+.field { margin-bottom: 1.25rem; }
+.field label { display: block; font-weight: 650; margin-bottom: 0.4rem; }
+.field input, .field select, .field textarea {
+  width: 100%; font: inherit; color: var(--ink); background: var(--paper);
+  border: 2px solid var(--rule); border-radius: 6px; padding: 0.7rem 0.9rem;
+}
+.field textarea { resize: vertical; min-height: 9rem; }
+.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--brass); outline: none; }
+.form-error { background: color-mix(in srgb, #b3261e 12%, var(--paper)); border-left: 4px solid #b3261e; padding: 0.75rem 1rem; border-radius: 0 6px 6px 0; }
+.contact-aside h2 { font-size: var(--t-md); }
+.contact-aside h2:not(:first-child) { margin-top: 1.75em; }
+.form-note-error { color: #b3261e; font-weight: 650; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .form-note-error { color: #f2b8b5; } }

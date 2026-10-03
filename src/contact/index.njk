@@ -1,0 +1,65 @@
+---
+layout: layouts/page.njk
+title: Contact
+lede: Questions about a project, the community, or working with GMOOCA. We read everything and reply to most messages within a few business days.
+description: Contact GMOOCA, Inc. about our guides, software, hardware or the upcoming community forums.
+permalink: /contact/
+prose: false
+---
+<div class="split">
+  <form class="contact-form" action="/contact.php" method="post">
+    <p class="form-error" role="alert" hidden data-form-error></p>
+
+    <div class="field">
+      <label for="c-name">Your name</label>
+      <input id="c-name" name="name" type="text" autocomplete="name" required maxlength="100">
+    </div>
+    <div class="field">
+      <label for="c-email">Email address</label>
+      <input id="c-email" name="email" type="email" autocomplete="email" required maxlength="200">
+    </div>
+    <div class="field">
+      <label for="c-topic">What's this about?</label>
+      <select id="c-topic" name="topic">
+        <option>General question</option>
+        <option>Gaming Manager software</option>
+        <option>EGM Module hardware</option>
+        <option>Community and forums</option>
+        <option>Business or press</option>
+        <option>Website problem</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="c-message">Message</label>
+      <textarea id="c-message" name="message" rows="7" required minlength="10" maxlength="5000"></textarea>
+    </div>
+    <div class="hp" aria-hidden="true">
+      <label for="c-website">Leave this empty</label>
+      <input id="c-website" name="website" type="text" tabindex="-1" autocomplete="off">
+    </div>
+    <button class="btn btn-primary" type="submit">Send message</button>
+    <p class="form-note">We use your details only to reply. See our <a href="/privacy/">privacy policy</a>.</p>
+  </form>
+
+  <div class="prose contact-aside">
+    <h2>Before you write</h2>
+    <p>We can't give legal advice about owning or operating machines in your state, and we can't help unlock or bypass a machine's security. For questions about a specific machine's settings, its manufacturer or your local distributor is the best source.</p>
+    <h2>Email</h2>
+    <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+  </div>
+</div>
+
+<script>
+  // Show the error passed back by contact.php (?error=...)
+  (function () {
+    var messages = {
+      missing: "Please fill in your name, email address and message.",
+      email: "That email address doesn't look right. Check it and try again.",
+      rate: "You've sent several messages in a short time. Please wait a few minutes and try again.",
+      send: "Your message couldn't be sent. Please try again, or email us directly at {{ site.email }}."
+    };
+    var code = new URLSearchParams(location.search).get("error");
+    var el = document.querySelector("[data-form-error]");
+    if (code && messages[code] && el) { el.textContent = messages[code]; el.hidden = false; }
+  })();
+</script>
