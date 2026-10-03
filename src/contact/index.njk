@@ -27,6 +27,8 @@ prose: false
         <option>Community and forums</option>
         <option>Business or press</option>
         <option>Website problem</option>
+        <option>Privacy or data request</option>
+        <option>Copyright notice</option>
       </select>
     </div>
     <div class="field">
@@ -45,7 +47,11 @@ prose: false
     <h2>Before you write</h2>
     <p>We can't give legal advice about owning or operating machines in your state, and we can't help unlock or bypass a machine's security. For questions about a specific machine's settings, its manufacturer or your local distributor is the best source.</p>
     <h2>Email</h2>
-    <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+    <dl class="email-list">
+      <div><dt>General, sales and projects</dt><dd><a href="mailto:{{ site.emails.sales }}">{{ site.emails.sales }}</a></dd></div>
+      <div><dt>Privacy, data and compliance</dt><dd><a href="mailto:{{ site.emails.compliance }}">{{ site.emails.compliance }}</a></dd></div>
+      <div><dt>Copyright notices</dt><dd><a href="mailto:{{ site.emails.copyright }}">{{ site.emails.copyright }}</a></dd></div>
+    </dl>
   </div>
 </div>
 

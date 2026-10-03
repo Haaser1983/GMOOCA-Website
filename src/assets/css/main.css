@@ -392,3 +392,7 @@ a:hover { color: var(--brass-ink); }
 @media (max-width: 52rem) { .principles { grid-template-columns: 1fr; } }
 .principles-note { margin: 2rem 0 0; color: var(--muted); max-width: 70ch; }
 .principles-note a { font-weight: 650; }
+.email-list { margin: 0; }
+.email-list > div { margin-bottom: 0.9rem; }
+.email-list dt { font-size: var(--t-sm); color: var(--muted); }
+.email-list dd { margin: 0; }

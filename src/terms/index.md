@@ -25,7 +25,7 @@ We work to keep the site accurate, but we provide it "as is," without warranties
 
 The text, diagrams and design of this site belong to GMOOCA, Inc. You're welcome to link to any page or quote short passages with credit. Please don't republish whole guides without permission.
 
-If you believe something on this site infringes your rights, write to [{{ site.email }}](mailto:{{ site.email }}) and we'll review it promptly.
+If you believe something on this site infringes your copyright or other rights, write to [{{ site.emails.copyright }}](mailto:{{ site.emails.copyright }}) and we'll review it promptly.
 
 ## Products
 

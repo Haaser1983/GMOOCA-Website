@@ -5,8 +5,16 @@
  */
 declare(strict_types=1);
 
-const SITE_EMAIL   = 'info@gmooca.org';      // where messages are delivered
-const FROM_EMAIL   = 'no-reply@gmooca.org';  // must be a mailbox/domain on this host
+const SITE_EMAIL       = 'sales@gmooca.org';       // default destination for messages
+const COMPLIANCE_EMAIL = 'compliance@gmooca.org';  // privacy and data requests
+const COPYRIGHT_EMAIL  = 'dcma@gmooca.org';        // copyright notices
+const FROM_EMAIL       = 'no_reply@gmooca.org';    // must be a mailbox on this host
+
+/** Contact-form topic => mailbox. Topics not listed go to SITE_EMAIL. */
+const TOPIC_ROUTES = [
+    'Privacy or data request' => COMPLIANCE_EMAIL,
+    'Copyright notice'        => COPYRIGHT_EMAIL,
+];
 const RATE_LIMIT   = 5;                      // submissions allowed...
 const RATE_WINDOW  = 600;                    // ...per IP in this many seconds
 
@@ -81,7 +89,7 @@ function rate_limited(string $bucket): bool {
     return $limited;
 }
 
-function send_mail(string $subject, string $body, ?string $replyTo = null): bool {
+function send_mail(string $subject, string $body, ?string $replyTo = null, string $to = SITE_EMAIL): bool {
     $headers = [
         'From: GMOOCA website <' . FROM_EMAIL . '>',
         'Content-Type: text/plain; charset=UTF-8',
@@ -89,7 +97,7 @@ function send_mail(string $subject, string $body, ?string $replyTo = null): bool
     ];
     if ($replyTo) $headers[] = 'Reply-To: ' . $replyTo;
     $subject = '=?UTF-8?B?' . base64_encode(header_safe($subject)) . '?=';
-    return mail(SITE_EMAIL, $subject, $body, implode("\r\n", $headers), '-f' . FROM_EMAIL);
+    return mail($to, $subject, $body, implode("\r\n", $headers), '-f' . FROM_EMAIL);
 }
 
 /** Only allow redirects back to a path on this site. */

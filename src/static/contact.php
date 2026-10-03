@@ -24,6 +24,7 @@ $body = "New message from the gmooca.org contact form\n\n"
       . 'Sent:  ' . gmdate('Y-m-d H:i') . " UTC\n\n"
       . str_repeat('-', 40) . "\n\n$message\n";
 
-if (!send_mail("[gmooca.org] $topic: $name", $body, $email)) redirect('/contact/?error=send');
+$to = TOPIC_ROUTES[$topic] ?? SITE_EMAIL;
+if (!send_mail("[gmooca.org] $topic: $name", $body, $email, $to)) redirect('/contact/?error=send');
 
 redirect('/contact/thanks/');

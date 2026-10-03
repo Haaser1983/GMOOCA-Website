@@ -23,7 +23,7 @@ We use contact details only to reply to you, and launch sign-ups only to send th
 
 ## Your choices
 
-You can ask us at any time to see, correct or delete the information we hold about you. To stop launch emails, reply to any email from us or write to [{{ site.email }}](mailto:{{ site.email }}). After the launch announcement is sent, we delete the sign-up list unless you've joined the community.
+You can ask us at any time to see, correct or delete the information we hold about you. Write to [{{ site.emails.compliance }}](mailto:{{ site.emails.compliance }}). To stop launch emails, reply to any email from us or write to that same address. After the launch announcement is sent, we delete the sign-up list unless you've joined the community.
 
 ## Children
 
@@ -35,4 +35,4 @@ If we change this policy, we'll update the date at the top of this page.
 
 ## Contact
 
-GMOOCA, Inc., [{{ site.email }}](mailto:{{ site.email }})
+GMOOCA, Inc., [{{ site.emails.compliance }}](mailto:{{ site.emails.compliance }})

@@ -3,7 +3,13 @@
   "legalName": "GMOOCA, Inc.",
   "fullName": "Gaming Machine Owners, Operators and Collectors Association",
   "url": "https://www.gmooca.org",
-  "email": "info@gmooca.org",
+  "email": "sales@gmooca.org",
+  "emails": {
+    "sales": "sales@gmooca.org",
+    "compliance": "compliance@gmooca.org",
+    "copyright": "dcma@gmooca.org",
+    "noReply": "no_reply@gmooca.org"
+  },
   "founded": 2020,
   "communityLive": false,
   "description": "Software, hardware and plain-language guides for slot machine owners, operators, collectors and small casinos. GMOOCA Gaming Manager speaks SAS and G2S, and it's available to anyone who owns a machine.",
