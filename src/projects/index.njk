@@ -1,8 +1,8 @@
 ---
 layout: layouts/page.njk
 title: Projects
-lede: The software, hardware and community platform GMOOCA is building, with where each one stands today.
-description: Progress on GMOOCA Gaming Manager Pro 2, the GMOOCA EGM Module hardware, and the GMOOCA community forums.
+lede: The software, hardware and community platform GMOOCA is building, with where each one stands today. Most of what we earn goes back into this work.
+description: Progress on GMOOCA Gaming Manager 2 and 3 (SAS and G2S slot machine management software), the GMOOCA SAS Gateway hardware, and the GMOOCA community forums.
 permalink: /projects/
 prose: false
 ---
@@ -19,6 +19,12 @@ prose: false
     <div class="prose">
       <p class="lead-in">{{ p.summary }}</p>
       {% for para in p.details %}<p>{{ para | md | safe }}</p>{% endfor %}
+      {% if p.next %}
+      <h3 class="side-h">Coming next</h3>
+      <dl class="next-list">
+        {% for n in p.next %}<div><dt>{{ n.label }}</dt><dd>{{ n.text }}</dd></div>{% endfor %}
+      </dl>
+      {% endif %}
     </div>
     <div class="project-side">
       <h3 class="side-h">Stage</h3>

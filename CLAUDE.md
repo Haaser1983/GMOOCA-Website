@@ -4,13 +4,16 @@ This is the gmooca.org website (Eleventy 3, Nunjucks + Markdown, PHP form handle
 
 ## Updating project progress (the most common request)
 
-When the owner reports progress on Gaming Manager Pro 2, the EGM Module, or the forums:
+When the owner reports progress on Gaming Manager 2, Gaming Manager 3, the SAS Gateway, or the forums:
 
 1. Edit only that project's entry in `src/_data/projects.json`.
 2. Set `phase` to one of its `phases`; rewrite `note` (1–2 plain sentences, present tense, no jargon); set `updated` to today (`YYYY-MM-DD`).
 3. Prepend a `log` entry `{ "date": "YYYY-MM-DD", "text": "..." }`. Newest first. One sentence, past tense.
 4. Run `npm run build` and confirm it succeeds.
-5. Commit with a message like `Projects: EGM Module moves to Build`. Push only when asked.
+5. Commit with a message like `Projects: SAS Gateway moves to Build`. Push only when asked; a push to `main` deploys to the live site.
+6. Optional `next` entries (`{ "label": "2.4", "text": "..." }`) show as "Coming next" on /projects/.
+
+Source notes for the software and hardware live in the owner's Gaming Manager repo (README, docs/ROADMAP.md, docs/TODO.md, CHANGELOG.md, hardware/*/). Translate them for owners: no part numbers, protocol command codes or internal ticket IDs. Never claim certification, regulatory approval, or association membership the owner hasn't confirmed.
 
 Write for owners and collectors, not engineers: say what changed and what's next, not part numbers or protocol internals.
 

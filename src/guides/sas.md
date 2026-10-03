@@ -3,7 +3,7 @@ title: SAS, explained
 summary: The serial link that lets a machine report meters, events and vouchers. Found on nearly every machine built since the late 1990s.
 lede: SAS is how a slot machine talks to the system that keeps track of it. If your machine came off a casino floor, it almost certainly speaks SAS, even sitting in your game room.
 description: A plain-language guide to the SAS slot machine protocol. What SAS does, what information a machine shares over it, and what it means for home owners and small operators.
-updated: 2026-10-02
+updated: 2026-10-03
 tags: guide
 permalink: /guides/sas/
 order: 1
@@ -59,7 +59,7 @@ Most owners never touch SAS because, until now, the tools to use it were built f
 
 Two of our projects use SAS directly:
 
-- **[GMOOCA Gaming Manager Pro 2](/projects/#gaming-manager)** is Windows software that acts as the host. It reads meters and events, keeps a history, and is designed for one machine in a game room up to a small floor.
-- **[The GMOOCA EGM Module](/projects/#egm-module)** is a small board that sits inside the cabinet and puts the machine's SAS port on your home or business network, so you don't need to run a serial cable to every machine.
+- **[GMOOCA Gaming Manager 2](/projects/#gaming-manager)** is Windows software that acts as the host. It reads meters and events, handles TITO tickets and credit transfers, keeps a history, and is designed for one machine in a game room up to a small floor.
+- **[The GMOOCA SAS Gateway](/projects/#sas-gateway)** is a small box that connects a machine's SAS port to your home or business network with one Ethernet cable, which also powers it, so you don't need to run a serial cable to every machine.
 
-Earlier versions of our software have already held live SAS conversations with a machine on our test bench. You can follow progress on the [projects page](/projects/).
+Gaming Manager has already been tested over SAS on real machines on our bench, and [Gaming Manager 3](/projects/#gaming-manager-3) will extend it for enterprise and regulated operators. You can follow progress on the [projects page](/projects/).

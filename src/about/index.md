@@ -15,14 +15,26 @@ Today GMOOCA, Inc. is a North Carolina corporation. We write our own guides, bui
 ## What we do
 
 - **Explain how machines work.** Our [guides](/guides/) cover how machines communicate and what that means for an owner, in plain language and without republishing anyone else's documents.
-- **Build tools at the right scale.** [GMOOCA Gaming Manager Pro 2](/projects/#gaming-manager) and the [GMOOCA EGM Module](/projects/#egm-module) bring the kind of monitoring casinos take for granted to a game room or a small floor.
+- **Build the tools casinos use, at every scale.** [GMOOCA Gaming Manager 2](/projects/#gaming-manager) and the [GMOOCA SAS Gateway](/projects/#sas-gateway) bring casino-style machine management to a game room or a small floor. [Gaming Manager 3](/projects/#gaming-manager-3), now in development, adds the enterprise and regulatory functions larger operators need.
 - **Bring people together.** The [GMOOCA community](/Community/) will give owners, operators and collectors one place to ask questions, share restorations and find parts.
 
 ## Who it's for
 
 - **Owners** who bought a machine for their home and want to understand it and keep it running.
-- **Operators** of small parlors, arcades and routes who need dependable records without enterprise systems.
+- **Operators** of parlors, arcades, routes and small casinos who need dependable records and control, at a price that fits.
 - **Collectors** who restore and preserve machines and care about their history.
+
+## Open to everyone
+
+Most companies that build gaming systems sell only to licensed casinos and their suppliers. GMOOCA's software and hardware are for anyone who owns a machine. When Gaming Manager is released, its free edition won't even need an account. In the meantime, our guides and project updates are open to everyone, with no license or sales call required.
+
+## Where the money goes
+
+Most of what GMOOCA earns is reinvested in research and development:
+
+- **Test equipment.** Real machines from different manufacturers and eras, so our software works on the cabinets people actually own.
+- **Hardware development.** Prototype boards, fabrication runs and testing for the SAS Gateway and what comes after it.
+- **Industry memberships.** Memberships in industry associations, including the Gaming Standards Association (GSA), so we work from the latest protocol standards, tools and test resources as they're published.
 
 ## What we don't do
 

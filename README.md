@@ -16,7 +16,7 @@ npm run build    # outputs the finished site to _site/
 
 | What | File |
 |---|---|
-| Project progress (Gaming Manager, EGM Module, forums) | `src/_data/projects.json` |
+| Project progress (Gaming Manager 2 and 3, SAS Gateway, forums) | `src/_data/projects.json` |
 | Site name, email, nav, trademark notice, forum-live switch | `src/_data/site.json` |
 | Planned forum sections | `src/_data/forums.json` |
 | Guides | `src/guides/*.md` |

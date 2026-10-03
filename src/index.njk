@@ -1,13 +1,13 @@
 ---
 layout: layouts/base.njk
-description: GMOOCA, Inc. builds plain-language guides, software and hardware for slot machine owners, small operators and collectors. Learn how SAS and G2S work and follow our projects.
+description: GMOOCA, Inc. builds SAS and G2S slot machine management software and hardware for owners, operators, collectors and small casinos, plus plain-language guides. Follow Gaming Manager 2 and 3 and the SAS Gateway.
 reels:
   - word: Owners
     strip: ["7", "BAR", "◆", "7", "BAR", "★", "7", "◆", "BAR"]
     text: Bought a machine for the game room? Learn what's inside it, how it talks to other equipment, and how to keep it running.
   - word: Operators
     strip: ["BAR", "★", "7", "◆", "BAR", "7", "★", "BAR", "7"]
-    text: Running a small parlor or a handful of machines? We're building tools to track meters, events and vouchers without casino-sized pricing.
+    text: Running a parlor, a route or a small casino? Our software tracks meters, events and tickets at a price that fits, with enterprise and regulatory features on the way.
   - word: Collectors
     strip: ["◆", "7", "BAR", "★", "◆", "BAR", "7", "★", "◆"]
     text: Keeping older cabinets alive? Trade parts sources, history and restoration notes with people who care about the same machines.
@@ -15,7 +15,7 @@ reels:
 <section class="hero">
   <div class="wrap">
     <h1 class="hero-title">A home base for the people who own, run and keep gaming machines.</h1>
-    <p class="hero-lede">{{ site.legalName }} writes plain-language guides and builds software and hardware for slot machine owners, small operators and collectors. We've been at it since {{ site.founded }}.</p>
+    <p class="hero-lede">{{ site.legalName }} builds software and hardware that let slot machine owners, operators and collectors run their machines the way casinos do, and writes plain-language guides to go with them. We've been at it since {{ site.founded }}.</p>
     <p class="hero-actions">
       <a class="btn btn-primary" href="#notify">Get forum launch updates</a>
       <a class="btn btn-quiet" href="#projects">See what we're building</a>
@@ -41,6 +41,26 @@ reels:
         <p>{{ reel.text }}</p>
       </li>
       {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="why-h">
+  <div class="wrap">
+    <h2 id="why-h">How GMOOCA works</h2>
+    <ul class="principles">
+      <li>
+        <h3>Open to every owner</h3>
+        <p>Most casino system makers sell only to licensed casinos. Our software and hardware are available to anyone with a machine, from a single cabinet in a game room to a small casino floor.</p>
+      </li>
+      <li>
+        <h3>Built on the real standards</h3>
+        <p>Gaming Manager speaks SAS and G2S, the same protocols casino systems use, and features are proven on real machines on our own bench before release.</p>
+      </li>
+      <li>
+        <h3>Reinvested in the work</h3>
+        <p>Most of what GMOOCA earns goes back into research and development: test machines, prototype hardware, and industry association memberships so we work from the latest GSA standards and tools.</p>
+      </li>
     </ul>
   </div>
 </section>

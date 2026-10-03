@@ -1,81 +1,75 @@
 [
   {
     "id": "gaming-manager",
-    "name": "GMOOCA Gaming Manager Pro 2",
+    "name": "GMOOCA Gaming Manager 2",
     "kind": "Software",
-    "summary": "Windows software that connects to your machines and keeps track of meters, events and vouchers. Built for home rooms and small floors, not casino budgets.",
-    "phases": [
-      "Plan",
-      "Design",
-      "Build",
-      "Test",
-      "Release"
-    ],
+    "summary": "Windows software that connects to your machines over SAS or G2S and keeps track of meters, events, tickets and credits. Built for home game rooms and small floors, not casino budgets.",
+    "phases": ["Plan", "Design", "Build", "Test", "Release"],
     "phase": "Build",
     "updated": "2026-10-02",
-    "note": "Ground-up rewrite underway. The earlier version proved live two-way SAS communication with a machine on our test bench.",
+    "note": "Version 2.3 is in internal testing on our own bench machines. The current focus is G2S: making Gaming Manager connect to network-based machines exactly the way a real casino system does.",
     "log": [
-      {
-        "date": "2026-10-02",
-        "text": "Rewrite in progress on a clean, modular codebase."
-      },
-      {
-        "date": "2026-08-19",
-        "text": "Earlier version retired after live SAS testing; lessons carried into the rewrite."
-      }
+      { "date": "2026-10-02", "text": "G2S work continues: machines are brought into play automatically after they connect, and meters are collected every minute." },
+      { "date": "2026-09-28", "text": "Version 2.2 milestone finished. Work began on 2.3, a rebuild of the G2S connection modeled on how real casino systems talk to machines." },
+      { "date": "2026-09-26", "text": "Bench session on a real IGT machine over SAS; fixes from that session went into 2.2." },
+      { "date": "2026-02-01", "text": "First 2.0 beta built." }
     ],
     "details": [
-      "Gaming Manager acts as the host system for your machines. It talks to each machine over SAS, reads its meters and events, and keeps a running history you can look back on.",
-      "It's being built for the owners and small operators that casino systems ignore: one machine in a game room up to a modest floor, with pricing to match. G2S support is planned once SAS support is solid.",
-      "Planned editions range from a free single-machine version to multi-location and white-label options. Pricing will be announced closer to release."
+      "Gaming Manager acts as the host system for your machines. It speaks SAS, the serial link found on nearly every machine since the late 1990s, and G2S, the newer network standard. It reads meters and events, prints and validates TITO tickets, moves credits to and from machines, and runs progressives and bonuses.",
+      "It comes in three editions. **Free** runs one machine with no account needed. **Advanced** is for home game rooms and collectors with several machines, with full SAS and G2S support. **Enterprise** is for small casinos and operators, with more machines, staff accounts and multi-location options. Pricing will be announced closer to release."
+    ],
+    "next": [
+      { "label": "2.4", "text": "A control center for every machine (bonuses, credits, handpays, devices), staff accounts with roles, and a companion app for floor staff." },
+      { "label": "2.5", "text": "Player tracking with cards, sessions and points, plus optional cloud reporting." }
     ]
   },
   {
-    "id": "egm-module",
-    "name": "GMOOCA EGM Module",
-    "kind": "Hardware",
-    "summary": "A small box that sits inside the cabinet and puts a machine's serial port on your network, so software can talk to it safely over Ethernet.",
-    "phases": [
-      "Plan",
-      "Design",
-      "Build",
-      "Test",
-      "Release"
-    ],
+    "id": "gaming-manager-3",
+    "name": "GMOOCA Gaming Manager 3",
+    "kind": "Software",
+    "summary": "The next generation of Gaming Manager, adding the enterprise and regulatory functions that casinos, route operators and multi-site businesses need.",
+    "phases": ["Plan", "Design", "Build", "Test", "Release"],
     "phase": "Design",
-    "updated": "2026-08-19",
-    "note": "Schematic review complete. Next step is schematic capture and circuit board layout.",
+    "updated": "2026-10-02",
+    "note": "Actively in development alongside the 2.x releases. Version 2 lays the groundwork: the staff roles, audit trail and service host it adds are the foundation Version 3 builds on.",
     "log": [
-      {
-        "date": "2026-08-19",
-        "text": "Design review finished; corrections made before board layout."
-      }
+      { "date": "2026-10-02", "text": "Version 3 development announced." }
     ],
     "details": [
-      "Every SAS machine has a serial port, and serial cables don't travel well across a room or a building. The EGM Module mounts inside the cabinet, connects to the machine's SAS port, and puts it on your network over a standard Ethernet cable.",
-      "Each connection is electrically isolated to protect the machine's electronics, and the module can be updated over USB as the software grows. It's designed to work hand in hand with Gaming Manager."
+      "Version 2 is built for owners and small floors. Version 3 is built for businesses that answer to regulators: detailed audit trails, user accountability with dual control on sensitive actions, secure accounting and reporting, and management across multiple locations.",
+      "Gaming Manager 2 isn't intended for regulated, real-money floors. Version 3 is where that work happens, and we'll share more about its features and the path to regulated use as development moves forward."
+    ]
+  },
+  {
+    "id": "sas-gateway",
+    "name": "GMOOCA SAS Gateway",
+    "kind": "Hardware",
+    "summary": "A small box that connects one machine's SAS port to your network with a single Ethernet cable, so you don't need to run a serial cable from every machine to your PC.",
+    "phases": ["Plan", "Design", "Build", "Test", "Release"],
+    "phase": "Design",
+    "updated": "2026-09-28",
+    "note": "The first circuit board revision is designed and ready for fabrication. A smaller second revision is already planned.",
+    "log": [
+      { "date": "2026-09-28", "text": "Rev A board layout finished and reviewed; plan made for a smaller Rev B." },
+      { "date": "2026-09-27", "text": "Design requirements locked: wired Ethernet, powered over the network cable, one machine per gateway." },
+      { "date": "2026-08-19", "text": "Earlier EGM Module design reviewed; its lessons carried into the Gateway." }
+    ],
+    "details": [
+      "The Gateway sits next to the machine and handles SAS's strict timing right at the cabinet. It takes its power from the same network cable it talks over (Power over Ethernet), so there's no extra power supply to wire. GMOOCA will supply a cable for each manufacturer's SAS connector.",
+      "Its link to Gaming Manager is encrypted, each unit has its own identity, and its firmware updates over the network. On paid editions of Gaming Manager, each Gateway you pair adds a machine to your license."
     ]
   },
   {
     "id": "community",
     "name": "Community forums",
     "kind": "Platform",
-    "summary": "Forums and a download library for owners, operators and collectors, all under one login.",
-    "phases": [
-      "Plan",
-      "Design",
-      "Build",
-      "Test",
-      "Release"
-    ],
+    "summary": "Forums and a download library for owners, operators and collectors, all under one login. The same account will manage your Gaming Manager licenses.",
+    "phases": ["Plan", "Design", "Build", "Test", "Release"],
     "phase": "Plan",
     "updated": "2026-08-23",
     "note": "Forum platform chosen and category structure drafted. Launch follows the platform purchase and setup.",
     "log": [
-      {
-        "date": "2026-08-23",
-        "text": "Platform selected; forum categories planned."
-      }
+      { "date": "2026-08-23", "text": "Platform selected; forum categories planned." }
     ],
     "details": [
       "The GMOOCA community will run on a dedicated forum platform at gmooca.org/Community, with discussion forums and a download library of GMOOCA-written guides and member-submitted original work.",

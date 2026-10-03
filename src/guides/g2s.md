@@ -3,7 +3,7 @@ title: G2S, explained
 summary: The newer network-based standard, how it differs from SAS, and why most home machines will never use it.
 lede: G2S was designed to replace the one-cable-per-machine model of SAS with machines that live on a network. It's powerful, but you're unlikely to meet it outside a large casino.
 description: A plain-language guide to the G2S (Game to System) protocol for slot machines. How it differs from SAS, where it's used, and what it means for owners and small operators.
-updated: 2026-10-02
+updated: 2026-10-03
 tags: guide
 permalink: /guides/g2s/
 order: 2
@@ -53,6 +53,8 @@ G2S is real and in use, but adoption has been slower than SAS. Many casinos stil
 
 If your machine supports SAS, SAS is where you'll get results today.
 
-## What GMOOCA is planning for G2S
+## What GMOOCA is doing with G2S
 
-G2S support is on the roadmap for [GMOOCA Gaming Manager Pro 2](/projects/#gaming-manager), so that operators with newer equipment can manage SAS and G2S machines from the same place. Our first priority is solid SAS support, since that's what nearly every owner can use. We'll post progress on the [projects page](/projects/) as G2S work begins.
+[GMOOCA Gaming Manager 2](/projects/#gaming-manager) includes a G2S host, so operators with newer equipment can manage SAS and G2S machines from the same screen. The current release, 2.3, is focused on making that host connect to machines exactly the way a real casino system does: joining, taking ownership of a machine's devices, collecting meters every minute, and handling tickets.
+
+That work is in internal testing on our bench. For most home owners, SAS is still the place to start. You can follow G2S progress on the [projects page](/projects/).
