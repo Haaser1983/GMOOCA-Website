@@ -42,7 +42,7 @@ Create `src/guides/<slug>.md` with front matter like the existing guides (`title
 
 ## Forms
 
-- `contact.php` emails messages to `sales@gmooca.org`, except privacy requests (`compliance@`) and copyright notices (`dcma@`). Mailboxes and routing are set in `src/static/private/forms.php`; the addresses shown on the site are in `src/_data/site.json` (`emails`).
+- `contact.php` emails messages to `sales@gmooca.org`, except privacy requests (`compliance@`) and copyright notices (`dmca@`). Mailboxes and routing are set in `src/static/private/forms.php`; the addresses shown on the site are in `src/_data/site.json` (`emails`).
 - `notify.php` saves forum-launch sign-ups to `forum-launch-list.csv` in a `gmooca-data` folder **one level above the web root**, so it's never publicly reachable. If that folder can't be created, it falls back to `private/data/`, which `.htaccess` blocks.
 - Both use a hidden honeypot field and a per-IP rate limit for spam.
 - `FROM_EMAIL` (`no_reply@gmooca.org`) must exist or be allowed to send on the hosting account, or messages may be rejected.

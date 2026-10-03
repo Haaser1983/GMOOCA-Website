@@ -7,7 +7,7 @@ declare(strict_types=1);
 
 const SITE_EMAIL       = 'sales@gmooca.org';       // default destination for messages
 const COMPLIANCE_EMAIL = 'compliance@gmooca.org';  // privacy and data requests
-const COPYRIGHT_EMAIL  = 'dcma@gmooca.org';        // copyright notices
+const COPYRIGHT_EMAIL  = 'dmca@gmooca.org';        // copyright notices
 const FROM_EMAIL       = 'no_reply@gmooca.org';    // must be a mailbox on this host
 
 /** Contact-form topic => mailbox. Topics not listed go to SITE_EMAIL. */
