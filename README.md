@@ -24,6 +24,8 @@ npm run build    # outputs the finished site to _site/
 | Shared header, footer, sign-up form | `src/_includes/partials/` |
 | Styles | `src/assets/css/main.css` |
 | Form handlers, `.htaccess`, redirects | `src/static/` |
+| Forum planning: rules and terms, legal checklist, moderation, seed content (not published) | `Forum/` |
+| Research notes (not published) | `docs/` |
 
 ## Updating project progress
 

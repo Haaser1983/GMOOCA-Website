@@ -1,6 +1,6 @@
 # GMOOCA forums: seed content
 
-Starter posts for launch day, so the forums aren't empty. Written by GMOOCA, informed by the questions owners ask most often on established communities (see `nlg-research.md`). All original, ready to post or edit.
+Starter posts for launch day, so the forums aren't empty. Written by GMOOCA, informed by the questions owners ask most often on established communities (see [`nlg-research.md`](nlg-research.md)). All original, ready to post or edit.
 
 **Suggested structure change:** keep our topic-based sections, and add **platform sub-forums under Machine help** (people look for "my machine" first): IGT S+ / S2000 · IGT Game King / I-Game · IGT AVP (G20, G23, Crystal) · Bally reel and Alpha · Bally electromechanical · WMS / Williams · Aristocrat · Konami · Aruze / Ainsworth / other · Video poker. Start with fewer and split when a sub-forum gets busy.
 
@@ -72,7 +72,7 @@ Starter posts for launch day, so the forums aren't empty. Written by GMOOCA, inf
 ### 6. Full forum rules
 *Section: Announcements and introductions · pinned, locked*
 
-> Copy from https://www.gmooca.org/Community/#rules-h and add: account and signature rules, how moderators handle reports, and marketplace rules when that section opens.
+> Post Part 1 of [rules.md](rules.md) (Community rules) and link to Part 2 (Community terms) and Part 3 (Marketplace rules).
 
 ---
 
@@ -138,4 +138,4 @@ GMOOCA-written only:
 
 - 20–30 seeded topics across at least 6 sections, at least 10 with staff replies already in the thread
 - Every pinned post live before registration opens
-- Invite the people listed in `nlg-research.md` personally, before public launch
+- Invite the people listed in [`nlg-research.md`](nlg-research.md) personally, before public launch
