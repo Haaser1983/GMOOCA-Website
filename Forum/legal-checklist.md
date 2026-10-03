@@ -15,6 +15,7 @@ Things GMOOCA must do or decide so that the protections the rules rely on actual
 - [ ] **Set the minimum age to 18** in registration (Invision "minimum age" / date-of-birth requirement). This keeps us out of COPPA's under-13 rules and fits the gambling-adjacent subject matter.
 - [ ] **Update the privacy policy** for forum data: accounts, IP logs, private messages, cookies set by Invision, payment data (handled by the processor), retention periods, and the account-deletion process.
 - [ ] **Turn on spam protection**: registration CAPTCHA or question, email verification, new-member post moderation for the first N posts, link limits for new accounts.
+- [ ] **Create an "AI-assisted" content tag or prefix** in Invision (forums, downloads, gallery) for the AI disclosure rule.
 - [ ] **Enable the Report button** for posts, messages, profiles and marketplace listings, and set who receives reports.
 
 ## Should do (strongly recommended)

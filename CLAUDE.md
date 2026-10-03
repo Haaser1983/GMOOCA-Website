@@ -23,6 +23,7 @@ Write for owners and collectors, not engineers: say what changed and what's next
 - No founder names, no social links (until the owner says otherwise).
 - No legal advice; no instructions for bypassing machine security.
 - Copy style: plain verbs, sentence case, no hype.
+- AI use is acknowledged openly (`/ai/`, footer). Keep that page accurate if how GMOOCA uses AI changes.
 - Keep `site.trademarks` (in `src/_data/site.json`) current when a new company or standard is named on the site.
 
 ## Design system

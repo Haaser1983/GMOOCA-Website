@@ -46,6 +46,10 @@ Most of what GMOOCA earns is reinvested in research and development:
 - **Hardware development.** Prototype boards, fabrication runs and testing for the SAS Gateway and what comes after it.
 - **Industry memberships.** Memberships in industry associations, including the Gaming Standards Association (GSA), so we work from the latest protocol standards, tools and test resources as they're published.
 
+## Built with AI, and honest about it
+
+We use AI tools for code, hardware review, documentation and this website, and people decide, test on real machines and answer for the result. Gaming Manager started nearly ten years ago as a hand-written program built from tutorials and forum answers; AI is a big part of why it's finally moving. [How we use AI](/ai/)
+
 ## What we don't do
 
 - We don't give legal advice. Gaming machine rules vary widely by state, and only an attorney can tell you how they apply to you.

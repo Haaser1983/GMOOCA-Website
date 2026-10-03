@@ -65,8 +65,12 @@ Gaming machines contain mains voltage, high-voltage monitor circuits, heavy movi
 - If you work for, own or are paid by a company whose products you discuss (a parts vendor, a distributor, a software maker, even a competitor of GMOOCA), say so in your profile and when you recommend its products.
 - No spam: no unsolicited ads, link-dropping, referral codes or SEO posts. Commercial listings go only in the marketplace, under Part 3.
 
-## 10. AI-generated content
-If you use an AI tool to write an answer or a guide, say so and check it before you post. Wrong technical advice can damage machines and hurt people. Don't post AI output you haven't verified.
+## 10. AI content is welcome; tag it
+GMOOCA has no rule against AI-generated content. We build our own products with AI help (see gmooca.org/ai). The one requirement is **transparency**:
+- If an AI tool wrote or substantially wrote your post, answer, guide, image or code, say so ("Drafted with AI help", "AI-generated, checked on my S2000"). Use the **AI-assisted** tag where the forum offers one.
+- Check technical advice against your own machine or a reliable source before you post it when you can. Confident wrong answers can damage equipment and hurt people.
+- You're responsible for what you post, whoever or whatever wrote the first draft. The other rules (copyright, safety, no security bypasses) apply to AI output the same as anything else.
+- Untagged AI content gets a friendly request to add a label, not a penalty. Repeatedly passing off AI output as personal experience, or using AI to mass-produce low-value posts, is treated as spam.
 
 ## 11. Members must be 18 or older
 You must be at least 18 to join.

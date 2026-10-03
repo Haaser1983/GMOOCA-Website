@@ -16,6 +16,7 @@ For GMOOCA staff and volunteer moderators. Members see the public version in [ru
 |---|---|
 | Post in the wrong section, duplicate thread | Move or merge; note to member |
 | Missing details in a help request | Reply with the "How to ask for help" template |
+| AI-written post with no tag | Ask the member to add an "AI-assisted" label or tag; no points. Repeated or mass-produced: treat as spam |
 | Mild incivility | Private note; edit only to remove an insult if the post is otherwise useful |
 | Harassment, slurs, threats | Remove; warning or suspension. **Threats of violence:** screenshot, preserve, escalate to an admin at once |
 | Personal information (doxxing) | Remove immediately; suspend; preserve a copy in the moderator log |
