@@ -4,6 +4,7 @@ title: About GMOOCA
 lede: GMOOCA, Inc. exists for the people casino technology was never built for, the ones who own, run and keep gaming machines outside the big floors.
 description: About GMOOCA, Inc., the Gaming Machine Owners, Operators and Collectors Association. A North Carolina company building guides, software and hardware for slot machine owners, small operators and collectors since 2020.
 permalink: /about/
+headLogo: true
 ---
 
 ## Who we are
