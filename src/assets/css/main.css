@@ -277,6 +277,13 @@ a:hover { color: var(--brass-ink); }
 .site-footer { border-top: 1px solid var(--rule); background: var(--paper-2); padding-block: 3rem 2.5rem; font-size: var(--t-sm); color: var(--muted); }
 .footer-grid { display: grid; grid-template-columns: 1fr auto; gap: 1.5rem 3rem; }
 .footer-name { font-weight: 800; font-stretch: 115%; color: var(--ink); font-size: var(--t-base); margin-bottom: 0.25rem; }
+.footer-name { display: flex; align-items: center; gap: 0.5rem; }
+/* Brand mark tinted with the brass token (single-color mark, applied as a mask) */
+.footer-mark {
+  width: 20px; height: 20px; flex: none; background: var(--brass);
+  -webkit-mask: url("/assets/brand/icon/gmooca-mark.svg") center / contain no-repeat;
+          mask: url("/assets/brand/icon/gmooca-mark.svg") center / contain no-repeat;
+}
 .footer-links { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 2rem; }
 .footer-links li { margin-bottom: 0.4rem; }
 .footer-links a { color: var(--muted); }
