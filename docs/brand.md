@@ -4,6 +4,18 @@ Not published (`docs/` isn't part of the build). The asset files are in `src/ass
 
 Source of truth: the `branding/` folder in the Gaming Manager repo (`GMOOCA-Gaming-Manager`). Its `build_brand.py` regenerates every file. If a color or shape changes, regenerate there and copy the results here; don't hand-edit these files.
 
+**Current copy:** Gaming Manager commit `ba7ff0d` (2026-10-03). The app and the site use the same artwork.
+
+| Website file (`src/assets/brand/`) | Copied from `branding/` |
+|---|---|
+| `gmooca-logo.svg`, `gmooca-logo-no-ring-text.svg`, `gmooca-lockup-{dark,light}-transparent.svg` | `logo/` |
+| `gmooca-logo-{512,1024}.png`, `gmooca-lockup-{dark,light}-transparent.png` | `logo/png/` |
+| `icon/gmooca-mark.svg`, `icon/gmooca-icon-small.svg` | `icon/` |
+| `icon/favicon.ico`, `favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png`, `icon-maskable-512.png` | `web/` |
+| `og-image.png` | Not in `branding/`. Built here by `tools/make-og-image.py` from the dark lockup. Rerun it after refreshing. |
+
+The SVGs carry embedded Content Credentials (C2PA metadata recording that Claude produced them). Leave it in; it matches the site's AI disclosure (`/ai/`). It makes the SVGs larger, so don't inline them in templates. Use `<img>` or a CSS mask instead.
+
 ## The marks
 
 | Mark | What it is | Where it goes |
@@ -11,8 +23,8 @@ Source of truth: the `branding/` folder in the Gaming Manager repo (`GMOOCA-Gami
 | **Crest chip** (`gmooca-logo.svg`) | Casino chip with a crimson shield and three reels, with "Gaming Machine Owners · Operators / Collectors Association" around the ring | The logo. Large uses only (≥150 px): About page, social image, print |
 | **Crest chip, no ring text** (`gmooca-logo-no-ring-text.svg`) | Same chip without the lettering | 32–150 px: site header, footer, cards |
 | **Lockups** (`gmooca-lockup-light-transparent.svg`, `gmooca-lockup-dark-transparent.svg`) | Chip + "GMOOCA" wordmark + full name | Banners, partner pages, documents. Light version = black wordmark for paper backgrounds |
-| **Reel chip icon** (`icon/…`) | Simplified gold chip with three reels on a dark tile | Favicon, home-screen and app icons only. Never as the site logo |
-| **Mark** (`icon/gmooca-mark.svg`) | The reel chip in `currentColor` | Inline SVG that takes the text color (e.g. footer) |
+| **Reel chip icon** (`icon/…`) | Simplified gold chip with three reels on a dark tile | Favicon, home-screen and app icons only. Never as the site logo. At 16–32 px use the bold **small variant** (`icon/gmooca-icon-small.svg`), as the app's `.ico` does; the site's SVG favicon uses it |
+| **Mark** (`icon/gmooca-mark.svg`) | The reel chip in one color | Tinted single-color uses (e.g. the footer), applied as a CSS `mask` so it takes any token color |
 | **Social image** (`og-image.png`, 1200×630) | Dark lockup on cabinet black | `og:image` / Twitter card |
 
 Rules:
