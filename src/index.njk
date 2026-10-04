@@ -74,7 +74,7 @@ reels:
     </div>
 
     <ol class="projects">
-      {% for p in projects %}
+      {% for p in projects %}{% if p.home !== false %}
       {% set current = p | phaseIndex %}
       <li class="project">
         <div class="project-main">
@@ -92,7 +92,7 @@ reels:
           <p class="project-date">Updated <time datetime="{{ p.updated }}">{{ p.updated | readableDate }}</time></p>
         </div>
       </li>
-      {% endfor %}
+      {% endif %}{% endfor %}
     </ol>
     <p><a class="text-link" href="/projects/">Full project history</a></p>
   </div>
