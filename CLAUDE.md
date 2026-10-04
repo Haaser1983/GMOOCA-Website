@@ -4,7 +4,7 @@ This is the gmooca.org website (Eleventy 3, Nunjucks + Markdown, PHP form handle
 
 ## Updating project progress (the most common request)
 
-When the owner reports progress on Gaming Manager 2, Gaming Manager 3, the SAS Gateway, or the forums:
+When the owner reports progress on Gaming Manager 2 or 3, the SAS Gateway (wired or wireless), TITO Magic, the Player Tracking Unit, or the forums:
 
 1. Edit only that project's entry in `src/_data/projects.json`.
 2. Set `phase` to one of its `phases`; rewrite `note` (1–2 plain sentences, present tense, no jargon); set `updated` to today (`YYYY-MM-DD`).
@@ -12,6 +12,18 @@ When the owner reports progress on Gaming Manager 2, Gaming Manager 3, the SAS G
 4. Run `npm run build` and confirm it succeeds.
 5. Commit with a message like `Projects: SAS Gateway moves to Build`. Push only when asked; a push to `main` deploys to the live site.
 6. Optional `next` entries (`{ "label": "2.4", "text": "..." }`) show as "Coming next" on /projects/.
+
+**Check the hardware folder on every project update.** `D:\Claude SAS-G2S app\GMOOCA-Gaming-Manager\hardware\` has one folder per board, each with a `DESIGN-BRIEF.md` (status line at the top), plus `PART-NUMBERING.md` (status of every product). Compare them against `projects.json` and report anything new or changed before editing:
+
+| Hardware folder | Project id |
+|---|---|
+| `sas-gateway/` | `sas-gateway` |
+| `sas-gateway-wireless/` | `sas-gateway-wireless` |
+| `tito-board/` | `tito-magic` |
+| `player-tracking/` | `player-tracking` |
+| `egm-module/` | reference design only, not listed |
+
+Projects with `"home": false` show on /projects/ but not on the homepage (used for early-stage concepts).
 
 Source notes for the software and hardware live in the owner's Gaming Manager repo (README, docs/ROADMAP.md, docs/TODO.md, CHANGELOG.md, hardware/*/). Translate them for owners: no part numbers, protocol command codes or internal ticket IDs. Never claim certification, regulatory approval, or association membership the owner hasn't confirmed.
 
