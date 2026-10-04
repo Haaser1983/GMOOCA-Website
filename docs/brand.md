@@ -44,9 +44,11 @@ The site has an established system (see `CLAUDE.md` › Design system and the to
 | Ink | `#0B0B0C` | `--bezel` `#1d2521` | |
 | Wordmark font | Michroma | Archivo 900, `font-stretch: 125%` (current `.wordmark`) | Inside the lockup images only. In the header, keep the Archivo text wordmark |
 
-**Open decision for the owner:** keep the site's brass palette as is (recommended; it already harmonizes), or shift `--brass` toward the brand gold. Don't change tokens until he decides.
+**Decided:** keep the site's brass palette unchanged.
 
 ## Rollout checklist
+
+**Status (branch `brand-kit`):** items 1–6 done; item 7 waits for the forum install. The SVG favicon uses the small icon variant (`icon/gmooca-icon-small.svg`) instead of `icon/favicon.svg`, because it reads better at tab size; the footer mark is applied as a CSS mask instead of inline SVG.
 
 Each item is a separate small commit. Run `npm run build` after each. **Push only when the owner says so** (a push to `main` deploys).
 
