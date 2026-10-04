@@ -2,9 +2,12 @@
 layout: layouts/base.njk
 ---
 <header class="page-head">
-  <div class="wrap">
-    <h1>{{ title }}</h1>
-    {% if lede %}<p class="lede">{{ lede }}</p>{% endif %}
+  <div class="wrap{% if headLogo %} page-head-logo{% endif %}">
+    <div>
+      <h1>{{ title }}</h1>
+      {% if lede %}<p class="lede">{{ lede }}</p>{% endif %}
+    </div>
+    {% if headLogo %}<img class="head-logo" src="/assets/brand/gmooca-logo.svg" alt="GMOOCA crest: a casino chip with a shield and three reels" width="160" height="160">{% endif %}
   </div>
 </header>
 <div class="wrap page-body{% if prose !== false %} prose{% endif %}">

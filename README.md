@@ -23,6 +23,7 @@ npm run build    # outputs the finished site to _site/
 | Other pages | `src/<page>/index.md` or `index.njk` |
 | Shared header, footer, sign-up form | `src/_includes/partials/` |
 | Styles | `src/assets/css/main.css` |
+| Logo, favicons, social image (usage rules in `docs/brand.md`) | `src/assets/brand/` |
 | Form handlers, `.htaccess`, redirects | `src/static/` |
 | Forum planning: rules and terms, legal checklist, moderation, seed content (not published) | `Forum/` |
 | Research notes (not published) | `docs/` |
