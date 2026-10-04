@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+<defs>
+<linearGradient id="gGold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFEB80"/><stop offset=".5" stop-color="#FFD700"/><stop offset="1" stop-color="#947D00"/></linearGradient>
+<linearGradient id="gAcc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#AF4959"/><stop offset="1" stop-color="#550F1A"/></linearGradient>
+<radialGradient id="gFace" cx=".5" cy=".4" r=".6"><stop offset="0" stop-color="#232327"/><stop offset="1" stop-color="#070708"/></radialGradient>
+</defs>
+<rect width="1024" height="1024" rx="230.4" fill="#18181B"/><rect x="1.5" y="1.5" width="1021" height="1021" rx="230.4" fill="none" stroke="#FFD700" stroke-opacity=".2" stroke-width="3"/><g transform="translate(133.12 133.12) scale(3.7888)"><circle cx="100" cy="100" r="86" fill="none" stroke="#FFD700" stroke-width="20" stroke-dasharray="60 30.06" transform="rotate(-15 100 100)"/>
+<circle cx="100" cy="100" r="64" fill="none" stroke="#FFD700" stroke-width="6"/><rect x="57" y="78" width="26" height="44" rx="4" fill="none" stroke="#FFD700" stroke-width="7"/><rect x="64.5" y="95" width="11" height="10" rx="1.5" fill="#FFD700"/><rect x="87" y="78" width="26" height="44" rx="4" fill="none" stroke="#FFD700" stroke-width="7"/><rect x="94.5" y="95" width="11" height="10" rx="1.5" fill="#FFD700"/><rect x="117" y="78" width="26" height="44" rx="4" fill="none" stroke="#FFD700" stroke-width="7"/><rect x="124.5" y="95" width="11" height="10" rx="1.5" fill="#FFD700"/></g>
+</svg>

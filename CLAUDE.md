@@ -29,3 +29,11 @@ Write for owners and collectors, not engineers: say what changed and what's next
 ## Design system
 
 Tokens at the top of `src/assets/css/main.css` (light and dark). One typeface: Archivo variable (self-hosted, `wdth` axis used for display). Brass (`--brass`) is the single accent. The homepage reels are the one decorative animation; don't add more.
+
+## Brand (logo and icons)
+
+Read `docs/brand.md` before touching the logo, favicon, header wordmark, social image or brand colors. Files are in `src/assets/brand/` (published at `/assets/brand/`); their source of truth is the `branding/` folder in the Gaming Manager repo, so don't edit them by hand here.
+
+- Crest chip (`gmooca-logo*.svg`) is the logo. The reel chip in `src/assets/brand/icon/` is for favicons and app icons only.
+- The logo is artwork: its crimson and gold don't change the CSS single-accent rule, and the header keeps the Archivo text wordmark next to the chip.
+- `docs/brand.md` has a rollout checklist. Do it one item per commit and push only when asked.
