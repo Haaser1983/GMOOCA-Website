@@ -33,7 +33,7 @@ Write for owners and collectors, not engineers: say what changed and what's next
 
 - `/hardware/` lists every project with `kind: "Hardware"` from `projects.json`; stage labels, feature lists and "What's next" are in `src/_data/hardware.json`. `/hardware/player-tracking/` covers the Home Player Center and Enterprise Floor Module.
 - The Gaming Manager repo's `hardware/website-handoff/WEBSITE-HANDOFF.md` and `images/` feed these pages. The handoff is written without knowledge of this site: follow its "do not publish" list, but where it differs from these house rules, the house rules win (no part numbers, chip or supplier names, certification claims, prices or dates).
-- Rebuild renders with `python3 tools/make-hardware-images.py <images folder>`. Use the `concept()` macro so every render keeps the "Concept render, not final hardware." caption. Don't publish an image whose artwork shows part numbers, chip or supplier names, or certification claims.
+- Rebuild renders with `python3 tools/make-hardware-images.py <images folder>`. Use the `concept()` macro so every render keeps the "Concept render, not final hardware." caption. GMOOCA model numbers inside the artwork (such as GM-3001) are allowed because the caption says model numbers and versions aren't final; keep them out of the page text. Don't publish an image whose artwork shows chip or supplier names, or certification claims.
 - Dated news goes in `src/updates/` (tag `update`). Record site changes in `CHANGELOG.md`.
 
 ## House rules for content

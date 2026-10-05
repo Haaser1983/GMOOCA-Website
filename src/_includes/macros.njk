@@ -5,7 +5,7 @@
     <source type="image/webp" srcset="/assets/hardware/{{ name }}-1200.webp 1200w, /assets/hardware/{{ name }}-2400.webp 2400w" sizes="(max-width: 72rem) 100vw, 72rem">
     <img src="/assets/hardware/{{ name }}-1200.jpg" alt="{{ alt }}" width="1200" height="760"{% if not eager %} loading="lazy"{% endif %} decoding="async">
   </picture>
-  <figcaption>Concept render, not final hardware.{% if sample %} Player names, points and amounts are sample data.{% endif %}</figcaption>
+  <figcaption>Concept render, not final hardware. Model numbers and versions shown are not final.{% if sample %} Player names, points and amounts are sample data.{% endif %}</figcaption>
 </figure>
 {% endmacro %}
 
