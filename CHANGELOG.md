@@ -2,6 +2,11 @@
 
 Notable changes to gmooca.org. Newest first. Routine project-progress edits to `src/_data/projects.json` are recorded in each project's `log` instead.
 
+## 2026-10-04 — Concept render captions
+
+### Changed
+- Every concept render caption now also says "Model numbers and versions shown are not final." *Why:* the renders show GMOOCA model numbers in the artwork, and the owner chose to keep them with a disclaimer rather than re-export the images.
+
 ## 2026-10-04 — Hardware pages
 
 ### Added
