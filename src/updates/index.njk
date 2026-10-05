@@ -1,0 +1,15 @@
+---
+layout: layouts/page.njk
+title: Updates
+lede: News on GMOOCA's hardware, software and community, newest first.
+description: Development updates from GMOOCA on its slot machine hardware, Gaming Manager software and community.
+permalink: /updates/
+prose: false
+tags: []
+eleventyExcludeFromCollections: true
+---
+<ul class="guide-list guide-list-lg">
+  {% for u in collections.update | reverse %}
+  <li><a href="{{ u.url }}"><span class="guide-title">{{ u.data.title }}</span><span class="guide-desc">{{ u.date | readableDate }}. {{ u.data.summary }}</span></a></li>
+  {% endfor %}
+</ul>

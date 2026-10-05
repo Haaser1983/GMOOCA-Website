@@ -23,6 +23,10 @@
       "url": "/projects/"
     },
     {
+      "label": "Hardware",
+      "url": "/hardware/"
+    },
+    {
       "label": "Community",
       "url": "/Community/"
     },
@@ -35,5 +39,5 @@
       "url": "/contact/"
     }
   ],
-  "trademarks": "IGT, Aristocrat, Konami, Light & Wonder, GSA, SAS, G2S, Anthropic and Claude are trademarks of their respective owners. GMOOCA is not affiliated with, sponsored by or endorsed by any gaming manufacturer or standards body."
+  "trademarks": "IGT, Aristocrat, Konami, Light & Wonder, GSA, SAS, G2S, Wi-Fi, Anthropic and Claude are trademarks of their respective owners. GMOOCA is not affiliated with, sponsored by or endorsed by any gaming manufacturer or standards body."
 }

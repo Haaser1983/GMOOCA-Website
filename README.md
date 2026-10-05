@@ -20,6 +20,8 @@ npm run build    # outputs the finished site to _site/
 | Site name, email, nav, trademark notice, forum-live switch | `src/_data/site.json` |
 | Planned forum sections | `src/_data/forums.json` |
 | Guides | `src/guides/*.md` |
+| Hardware pages | `src/hardware/*.njk`, `src/_data/hardware.json`, renders in `src/assets/hardware/` |
+| Updates (news posts) | `src/updates/*.md` |
 | Other pages | `src/<page>/index.md` or `index.njk` |
 | Shared header, footer, sign-up form | `src/_includes/partials/` |
 | Styles | `src/assets/css/main.css` |

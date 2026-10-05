@@ -19,6 +19,7 @@ prose: false
     <div class="prose">
       <p class="lead-in">{{ p.summary }}</p>
       {% for para in p.details %}<p>{{ para | md | safe }}</p>{% endfor %}
+      {% if p.page %}<p><a class="text-link" href="{{ p.page }}">{% if p.page.startsWith("/hardware/#") %}See it on the hardware page{% else %}Concept images and details{% endif %}</a></p>{% endif %}
       {% if p.next %}
       <h3 class="side-h">Coming next</h3>
       <dl class="next-list">

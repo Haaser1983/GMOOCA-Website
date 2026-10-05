@@ -413,3 +413,18 @@ a:hover { color: var(--brass-ink); }
 .email-list > div { margin-bottom: 0.9rem; }
 .email-list dt { font-size: var(--t-sm); color: var(--muted); }
 .email-list dd { margin: 0; }
+
+/* ==========================================================================
+   Hardware (concept renders, feature lists)
+   ========================================================================== */
+.concept { margin: 1.5rem 0 2rem; }
+.concept img { display: block; width: 100%; height: auto; border-radius: 10px; background: var(--paper-2); }
+.concept figcaption { font-size: var(--t-sm); color: var(--muted); margin-top: 0.6rem; }
+.hw-features { padding-left: 1.25rem; }
+.hw-features li { margin-bottom: 0.6em; }
+.hw-features li::marker { color: var(--brass-ink); }
+.pt-section { padding-block: 2.5rem; border-top: 1px solid var(--rule); scroll-margin-top: 1rem; }
+.pt-section:first-of-type { border-top: 0; }
+.pt-section h2 { font-size: var(--t-lg); }
+.pt-sub { margin-top: 1rem; }
+.pt-sub h3 { margin-top: 0; }

@@ -1,0 +1,45 @@
+{
+  "stage": {
+    "home-player-center": "Schematics, proof of concept",
+    "enterprise-floor-module": "Schematics, proof of concept",
+    "tito-magic": "Board designed, on hold",
+    "sas-gateway": "First prototype boards",
+    "sas-gateway-wireless": "Concept"
+  },
+  "features": {
+    "home-player-center": [
+      "<strong>SAS built in:</strong> tickets in and out, free play and bonus credits, with no PC needed.",
+      "<strong>Player tracking:</strong> tap a GMOOCA card on the lit ring, or use the machine's existing magstripe card reader.",
+      "<strong>Bonus wheel:</strong> players earn session points and spin for free play; the award lands on the credit meter.",
+      "<strong>Connections:</strong> Wi-Fi 6 and optional wired Ethernet to the GMOOCA app; it works standalone without them.",
+      "<strong>Power:</strong> the cabinet's spare 12 or 24 V."
+    ],
+    "enterprise-floor-module": [
+      "A dedicated SAS processor keeps meters, door events and tickets running even while the display system updates.",
+      "Linux display system on an industry-standard plug-in module, so there's no single-vendor lock-in.",
+      "Bonded-glass 6.2-inch touchscreen.",
+      "Phone-wallet-ready card reader module.",
+      "One PoE+ network cable carries both data and power; cabinet power is the alternative.",
+      "Isolated SAS connection."
+    ],
+    "tito-magic": [
+      "Plugs into the SAS port; no PC or network.",
+      "Two taps of the service button add $100 of free play; four taps add $500. Amounts are set on a small switch.",
+      "Detects the machine's settings automatically."
+    ],
+    "sas-gateway": [
+      "Wired, powered over the network cable, and links one machine to the GMOOCA app."
+    ],
+    "sas-gateway-wireless": [
+      "A wireless version of the gateway for game rooms where running cable isn't practical."
+    ]
+  },
+  "next": [
+    "<strong>Bench testing</strong> of the player tracking building blocks on development kits: the 6.2-inch screen, card taps, and SAS bonus credits on a real machine.",
+    "<strong>Display samples</strong> from shortlisted 6.2-inch panel makers. The insert is designed around the standard 6.2-inch size used by existing player tracking displays.",
+    "<strong>Circuit board layout</strong> of the Home Player Center, then a first prototype run.",
+    "<strong>Custom inserts:</strong> one universal core plus an adapter plate for each cabinet family, starting with the cabinets we own.",
+    "<strong>Software:</strong> player tracking, mini-games and rewards come with Gaming Manager 3. Gaming Manager 2 continues to be finished and tested.",
+    "<strong>TITO Magic and the smaller Gateway revision</strong> resume after the player tracking prototypes."
+  ]
+}
