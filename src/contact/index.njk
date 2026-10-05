@@ -24,6 +24,7 @@ prose: false
         <option>General question</option>
         <option>Gaming Manager software</option>
         <option>SAS Gateway hardware</option>
+        <option data-key="cabinets">My cabinets (player tracking)</option>
         <option>Community and forums</option>
         <option>Business or press</option>
         <option>Website problem</option>
@@ -67,5 +68,9 @@ prose: false
     var code = new URLSearchParams(location.search).get("error");
     var el = document.querySelector("[data-form-error]");
     if (code && messages[code] && el) { el.textContent = messages[code]; el.hidden = false; }
+    // Preselect a topic from links like /contact/?topic=cabinets
+    var key = new URLSearchParams(location.search).get("topic");
+    var opt = key && document.querySelector('#c-topic option[data-key="' + key.replace(/[^a-z-]/g, "") + '"]');
+    if (opt) opt.selected = true;
   })();
 </script>

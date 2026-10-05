@@ -1,0 +1,44 @@
+---
+layout: layouts/page.njk
+title: Hardware
+lede: The boards and modules GMOOCA is designing, from a plug-and-play ticket board for one machine to player tracking for casino floors. Everything here is in development, and nothing is for sale yet.
+description: GMOOCA slot machine hardware in development - the Home Player Center player tracking insert, the Enterprise Floor Module, TITO Magic and the SAS Gateway - and where each one stands.
+permalink: /hardware/
+prose: false
+---
+{% from "macros.njk" import concept, phases %}
+<p class="band-meta">Last updated <time datetime="{{ projects | latestUpdate }}">{{ projects | latestUpdate | readableDate }}</time>. Read the <a href="/updates/2026-10-hardware/">October 2026 hardware update</a>.</p>
+
+{% for p in projects %}{% if p.kind == "Hardware" %}
+<section class="project-full" id="{{ p.id }}" aria-labelledby="{{ p.id }}-h">
+  <div class="project-full-head">
+    <p class="project-kind">{{ hardware.stage[p.id] }}</p>
+    <h2 id="{{ p.id }}-h">{{ p.name }}</h2>
+  </div>
+  {% if p.id == "home-player-center" %}{{ concept("player-center-cabinet", "Concept image of a slot machine with the GMOOCA Home Player Center insert below the game screen, showing a welcome screen and a lit blue NFC tap ring", sample=true, eager=true) }}{% endif %}
+  <div class="project-full-body">
+    <div class="prose">
+      <p class="lead-in">{{ p.summary }}</p>
+      {% if hardware.features[p.id] %}
+      <ul class="hw-features">{% for f in hardware.features[p.id] %}<li>{{ f | safe }}</li>{% endfor %}</ul>
+      {% endif %}
+      {% if p.page and not p.page.startsWith("/hardware/#") %}<p><a class="text-link" href="{{ p.page }}">{% if p.id == "home-player-center" %}See the player tracking page{% else %}More on player tracking{% endif %}</a></p>{% endif %}
+    </div>
+    <div class="project-side">
+      <h3 class="side-h">Stage</h3>
+      {{ phases(p) }}
+      <p class="project-note">{{ p.note }}</p>
+    </div>
+  </div>
+</section>
+{% endif %}{% endfor %}
+
+<section class="community-section split" aria-labelledby="next-h">
+  <h2 id="next-h">What's next</h2>
+  <ol class="rules">{% for n in hardware.next %}<li>{{ n | safe }}</li>{% endfor %}</ol>
+</section>
+
+<div class="callout">
+  <h2>Tell us which cabinets you own</h2>
+  <p>The player tracking insert pairs one core with an adapter plate for each cabinet family. Knowing which cabinets owners have helps us choose the first plates. <a href="/contact/?topic=cabinets">Send us your cabinet list</a>.</p>
+</div>

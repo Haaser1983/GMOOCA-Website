@@ -60,9 +60,13 @@
       "Release"
     ],
     "phase": "Design",
-    "updated": "2026-10-02",
+    "updated": "2026-10-04",
     "note": "Actively in development alongside the 2.x releases. Version 2 lays the groundwork: the staff roles, audit trail and service host it adds are the foundation Version 3 builds on.",
     "log": [
+      {
+        "date": "2026-10-04",
+        "text": "Work started on a full casino management system with player tracking, mini-games and rewards built in."
+      },
       {
         "date": "2026-10-02",
         "text": "Version 3 development announced."
@@ -71,6 +75,33 @@
     "details": [
       "Version 2 is built for owners and small floors. Version 3 is built for businesses that answer to regulators: detailed audit trails, user accountability with dual control on sensitive actions, secure accounting and reporting, and management across multiple locations.",
       "Gaming Manager 2 isn't intended for regulated, real-money floors. Version 3 is where that work happens, and we'll share more about its features and the path to regulated use as development moves forward."
+    ]
+  },
+  {
+    "id": "home-player-center",
+    "name": "GMOOCA Home Player Center",
+    "kind": "Hardware",
+    "summary": "One touchscreen insert that replaces the bridge, the TITO board and the player tracking unit. It fits the player tracking opening below the game screen.",
+    "phases": [
+      "Plan",
+      "Design",
+      "Build",
+      "Test",
+      "Release"
+    ],
+    "phase": "Design",
+    "updated": "2026-10-04",
+    "page": "/hardware/player-tracking/",
+    "note": "First-pass schematics are drawn and independently reviewed, as a proof of concept. Next come bench tests of the screen, card taps and bonus credits on development kits.",
+    "log": [
+      {
+        "date": "2026-10-04",
+        "text": "First-pass schematics drawn and independently reviewed; display makers shortlisted."
+      }
+    ],
+    "details": [
+      "A 6.2-inch touchscreen insert that becomes the machine's only interface board. Tickets in and out, free play and bonus credits are built in, with no PC needed. Players tap a GMOOCA card on the lit ring, or use the machine's existing card reader, and earn points toward a bonus wheel spin for free play.",
+      "It connects to the GMOOCA app over Wi-Fi or an optional network cable, and works on its own without either. Power comes from the cabinet's spare supply. See the [player tracking page](/hardware/player-tracking/) for concept images."
     ]
   },
   {
@@ -87,7 +118,7 @@
     ],
     "phase": "Build",
     "updated": "2026-10-03",
-    "note": "The first boards (Rev A) are with the board maker. A smaller second revision is planned, with room for a player tracking unit to plug in.",
+    "note": "The first boards (Rev A) are with the board maker. A smaller second revision follows the player tracking prototypes.",
     "log": [
       {
         "date": "2026-10-03",
@@ -109,7 +140,8 @@
     "details": [
       "The Gateway sits next to the machine and handles SAS's strict timing right at the cabinet. It takes its power from the same network cable it talks over (Power over Ethernet), so there's no extra power supply to wire. GMOOCA will supply a cable for each manufacturer's SAS connector.",
       "Its link to Gaming Manager is encrypted, each unit has its own identity, and its firmware updates over the network. On paid editions of Gaming Manager, each Gateway you pair adds a machine to your license."
-    ]
+    ],
+    "page": "/hardware/#sas-gateway"
   },
   {
     "id": "tito-magic",
@@ -124,9 +156,13 @@
       "Release"
     ],
     "phase": "Design",
-    "updated": "2026-10-03",
-    "note": "The first circuit board design is finished and checked. Next come bench tests on machines from several manufacturers and the first firmware.",
+    "updated": "2026-10-04",
+    "note": "The first board design is complete and checked. It is on hold while player tracking takes priority.",
     "log": [
+      {
+        "date": "2026-10-04",
+        "text": "Paused so the player tracking prototypes can come first."
+      },
       {
         "date": "2026-10-03",
         "text": "Design brief written and first circuit board design completed."
@@ -136,6 +172,34 @@
       "TITO Magic is built for owners who just want it to work. Set the machine's ticket options once using our setup guide for your brand, plug in one cable, and power it from the machine's USB port or a phone charger. The board works out the rest on its own.",
       "Tickets print and redeem across all your machines. Tap the service button twice or four times to add free-play credits in exact dollar amounts, chosen with one small switch; a single press still calls the attendant as usual. It's protected against surges and mis-plugging, with a latching connector that only fits one way.",
       "Want custom amounts, ticket logs or several machines managed together? That's what Gaming Manager and the SAS Gateway are for. TITO Magic is for home and hobby use with machines you own."
+    ],
+    "page": "/hardware/#tito-magic"
+  },
+  {
+    "id": "enterprise-floor-module",
+    "name": "GMOOCA Enterprise Floor Module",
+    "kind": "Hardware",
+    "summary": "Machine interface and player display in one bezel module, designed for casino floors.",
+    "phases": [
+      "Plan",
+      "Design",
+      "Build",
+      "Test",
+      "Release"
+    ],
+    "phase": "Design",
+    "updated": "2026-10-04",
+    "home": false,
+    "page": "/hardware/player-tracking/#enterprise",
+    "note": "First-pass schematics are drawn and reviewed, as a proof of concept, built on an open plug-in module standard.",
+    "log": [
+      {
+        "date": "2026-10-04",
+        "text": "First-pass schematics drawn and reviewed."
+      }
+    ],
+    "details": [
+      "A dedicated processor keeps meters, door events and tickets running even while the display updates. One network cable carries both data and power, and the machine connection is isolated. It's a design in development, not an approved device."
     ]
   },
   {
@@ -162,33 +226,8 @@
     ],
     "details": [
       "Like the wired Gateway, it handles the machine's timing right at the cabinet and talks to Gaming Manager over an encrypted link. The wired Gateway stays the recommended choice for casinos and larger floors; the wireless version is aimed at home game rooms."
-    ]
-  },
-  {
-    "id": "player-tracking",
-    "name": "GMOOCA Player Tracking Unit",
-    "kind": "Hardware",
-    "summary": "A card reader, small display and buttons that mount in the cabinet, like the player tracking units on casino machines. Players tap a card, and play turns into points.",
-    "phases": [
-      "Plan",
-      "Design",
-      "Build",
-      "Test",
-      "Release"
     ],
-    "phase": "Plan",
-    "updated": "2026-10-03",
-    "home": false,
-    "note": "Early planning, timed to match player tracking in Gaming Manager. The first goal is fixing how it connects, so the next SAS Gateway revision has a port for it.",
-    "log": [
-      {
-        "date": "2026-10-03",
-        "text": "Design brief started."
-      }
-    ],
-    "details": [
-      "It's planned to plug into the SAS Gateway, which already talks to the machine, so each machine needs only one network connection. Card options under consideration range from inexpensive cards for home use to secure cards suited to a casino."
-    ]
+    "page": "/hardware/#sas-gateway-wireless"
   },
   {
     "id": "community",

@@ -1,0 +1,20 @@
+{#- Concept render with responsive sources. name = file stem in /assets/hardware/ -#}
+{% macro concept(name, alt, sample=false, eager=false) %}
+<figure class="concept">
+  <picture>
+    <source type="image/webp" srcset="/assets/hardware/{{ name }}-1200.webp 1200w, /assets/hardware/{{ name }}-2400.webp 2400w" sizes="(max-width: 72rem) 100vw, 72rem">
+    <img src="/assets/hardware/{{ name }}-1200.jpg" alt="{{ alt }}" width="1200" height="760"{% if not eager %} loading="lazy"{% endif %} decoding="async">
+  </picture>
+  <figcaption>Concept render, not final hardware.{% if sample %} Player names, points and amounts are sample data.{% endif %}</figcaption>
+</figure>
+{% endmacro %}
+
+{#- Compact Plan → Release bar for a project -#}
+{% macro phases(p) %}
+{% set current = p | phaseIndex %}
+<ol class="phases" aria-label="{{ p.name }} progress: {{ p.phase }} phase">
+  {% for ph in p.phases %}
+  <li class="{% if loop.index0 < current %}done{% elif loop.index0 == current %}now{% endif %}"{% if loop.index0 == current %} aria-current="step"{% endif %}><span>{{ ph }}</span></li>
+  {% endfor %}
+</ol>
+{% endmacro %}

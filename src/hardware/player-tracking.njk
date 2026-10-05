@@ -1,0 +1,73 @@
+---
+layout: layouts/page.njk
+title: Player tracking
+lede: Player tracking turns play into points, rewards and free play, the way casino loyalty programs do. GMOOCA is designing it in two forms, one for home game rooms and small floors and one for casino floors. Both are proofs of concept in development.
+description: GMOOCA's player tracking hardware in development - the Home Player Center touchscreen insert for home game rooms and small floors, and the Enterprise Floor Module for casino floors. Concept images and where each stands.
+permalink: /hardware/player-tracking/
+prose: false
+---
+{% from "macros.njk" import concept, phases %}
+{% set hpc = projects | selectattr("id", "equalto", "home-player-center") | first %}
+{% set efm = projects | selectattr("id", "equalto", "enterprise-floor-module") | first %}
+
+{{ concept("player-center-cabinet", "Concept image of a slot machine with the GMOOCA Home Player Center insert below the game screen, showing a welcome screen and a lit blue NFC tap ring", sample=true, eager=true) }}
+
+<section class="pt-section" id="home-player-center" aria-labelledby="hpc-h">
+  <div class="split">
+    <div>
+      <p class="project-kind">{{ hardware.stage["home-player-center"] }}</p>
+      <h2 id="hpc-h">{{ hpc.name }}</h2>
+      <p class="lead-in">One insert replaces the bridge, the TITO board and the player tracking unit.</p>
+      <p>A 6.2-inch touchscreen insert for the player tracking opening below the game screen. It is the machine's only interface board.</p>
+    </div>
+    <ul class="hw-features">
+      {% for f in hardware.features["home-player-center"] %}<li>{{ f | safe }}</li>{% endfor %}
+    </ul>
+  </div>
+
+  {{ concept("player-center-insert", "Front of the GMOOCA Home Player Center insert: 6.2-inch touchscreen, NFC tap ring, card slot and adapter plate", sample=true) }}
+
+  <div class="split pt-sub">
+    <h3>The player experience</h3>
+    <div class="prose">
+      <p>A player taps a card to start earning points. The screen welcomes them with their tier and points, and every set of session points unlocks a spin of the bonus wheel. Wins are added as free play straight to the machine's credit meter.</p>
+    </div>
+  </div>
+
+  {{ concept("player-screens", "Four player screens: tap your card, welcome with points and tier, bonus wheel, free play added", sample=true) }}
+
+  <div class="split pt-sub">
+    <h3>How it's built</h3>
+    <div class="prose">
+      <p>Front to back, the insert is five layers: cover glass, an adapter plate, the core housing, the display beside a separate card-tap antenna board, and the main board.</p>
+      <p>The core is the same for every machine. A laser-cut adapter plate fits it to each cabinet family, starting with the cabinets we own.</p>
+    </div>
+  </div>
+</section>
+
+<section class="pt-section" id="enterprise" aria-labelledby="efm-h">
+  <div class="split">
+    <div>
+      <p class="project-kind">{{ hardware.stage["enterprise-floor-module"] }}</p>
+      <h2 id="efm-h">{{ efm.name }}</h2>
+      <p class="lead-in">Machine interface and player display in one bezel module, designed for casino floors.</p>
+      <p>It's a design in development, not an approved device.</p>
+    </div>
+    <ul class="hw-features">
+      {% for f in hardware.features["enterprise-floor-module"] %}<li>{{ f | safe }}</li>{% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="pt-section" aria-labelledby="stand-h">
+  <h2 id="stand-h">Where they stand</h2>
+  <ol class="projects">
+    {% for p in [hpc, efm] %}
+    <li class="project">
+      <div class="project-main"><h3>{{ p.name }}</h3></div>
+      <div class="project-status">{{ phases(p) }}<p class="project-note">{{ p.note }}</p></div>
+    </li>
+    {% endfor %}
+  </ol>
+  <p>Player tracking software comes with <a href="/projects/#gaming-manager-3">Gaming Manager 3</a>. See <a href="/hardware/">all GMOOCA hardware</a> and what's next.</p>
+</section>
